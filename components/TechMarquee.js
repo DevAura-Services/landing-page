@@ -1,32 +1,56 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 const technologies = [
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Kubernetes', icon: '☸️' },
-    { name: 'Jenkins', icon: '🤵' },
-    { name: 'Terraform', icon: '🏗️' },
-    { name: 'Ansible', icon: '📜' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Google Cloud', icon: '☁️' },
-    { name: 'Prometheus', icon: '🔥' },
-    { name: 'Grafana', icon: '📊' },
-    { name: 'Git', icon: '📦' },
-    { name: 'GitLab', icon: '🦊' },
-    { name: 'Python', icon: '🐍' },
+    { name: 'Docker', emoji: '🐳', logo: 'https://cdn.simpleicons.org/docker/2496ED' },
+    { name: 'Kubernetes', emoji: '☸️', logo: 'https://cdn.simpleicons.org/kubernetes/326CE5' },
+    { name: 'Jenkins', emoji: '🤵', logo: 'https://cdn.simpleicons.org/jenkins/D24939' },
+    { name: 'Terraform', emoji: '🏗️', logo: 'https://cdn.simpleicons.org/terraform/7B42BC' },
+    { name: 'Ansible', emoji: '📜', logo: 'https://cdn.simpleicons.org/ansible/EE0000' },
+    { name: 'AWS', emoji: '☁️', logo: 'https://cdn.simpleicons.org/amazonaws/232F3E' },
+    { name: 'Google Cloud', emoji: '☁️', logo: 'https://cdn.simpleicons.org/googlecloud/4285F4' },
+    { name: 'Prometheus', emoji: '🔥', logo: 'https://cdn.simpleicons.org/prometheus/E6522C' },
+    { name: 'Grafana', emoji: '📊', logo: 'https://cdn.simpleicons.org/grafana/F46800' },
+    { name: 'Git', emoji: '📦', logo: 'https://cdn.simpleicons.org/git/F05032' },
+    { name: 'GitLab', emoji: '🦊', logo: 'https://cdn.simpleicons.org/gitlab/FC6D26' },
+    { name: 'Python', emoji: '🐍', logo: 'https://cdn.simpleicons.org/python/3776AB' },
 ];
 
-const MarqueeRow = ({ items, direction = 'left', speed = 'fast' }) => {
+const TechItem = ({ tech }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    return (
+        <div className="flex items-center gap-3 bg-[#1e293b]/50 border border-white/5 px-6 py-3 rounded-xl backdrop-blur-sm hover:border-blue-500/50 transition-colors cursor-default min-w-[160px]">
+            <div className="relative w-8 h-8 flex items-center justify-center">
+                {/* Emoji (Visible until logo loads) */}
+                <span
+                    className={`text-2xl absolute transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}
+                >
+                    {tech.emoji}
+                </span>
+
+                {/* Official Logo (Fades in) */}
+                <img
+                    src={tech.logo}
+                    alt={tech.name}
+                    className={`w-6 h-6 object-contain transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => setIsLoaded(true)}
+                />
+            </div>
+            <span className="text-gray-300 font-medium">{tech.name}</span>
+        </div>
+    );
+};
+
+const MarqueeRow = ({ items, direction = 'left' }) => {
     const animationClass = direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right';
 
     return (
         <div className="flex overflow-hidden py-4 group">
             <div className={`flex gap-8 ${animationClass} whitespace-nowrap`}>
                 {[...items, ...items, ...items].map((tech, idx) => (
-                    <div
-                        key={`${tech.name}-${idx}`}
-                        className="flex items-center gap-3 bg-[#1e293b]/50 border border-white/5 px-6 py-3 rounded-xl backdrop-blur-sm hover:border-blue-500/50 transition-colors cursor-default"
-                    >
-                        <span className="text-2xl">{tech.icon}</span>
-                        <span className="text-gray-300 font-medium">{tech.name}</span>
-                    </div>
+                    <TechItem key={`${tech.name}-${idx}`} tech={tech} />
                 ))}
             </div>
         </div>
@@ -44,16 +68,6 @@ export default function TechMarquee() {
             </div>
 
             <div className="flex flex-col gap-6">
-                {/* Row 1: Left to Right (Wait, user asked for Left to Right first?) 
-            User Request: "scroll from left to right , the second line from right to left and the third line from left to right"
-            Usually "scroll left" means content moves TO the left (Right -> Left).
-            "scroll from left to right" means content moves TO the right (Left -> Right).
-            
-            Let's interpret "from left to right" as moving towards the right.
-            So Row 1: Right direction.
-            Row 2: Left direction.
-            Row 3: Right direction.
-        */}
                 <MarqueeRow items={technologies.slice(0, 6)} direction="right" />
                 <MarqueeRow items={technologies.slice(6, 12)} direction="left" />
                 <MarqueeRow items={technologies} direction="right" />
