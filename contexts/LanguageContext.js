@@ -81,9 +81,9 @@ const translations = {
             backToJobs: 'Back to Jobs'
         },
         cta: {
-            title: 'Ready to Leverage Tunisia\'s Tech Talent?',
+            title: 'Ready to Leverage Our Talent?',
             description: 'Let Devaura connect you with the best DevOps and MLOps engineers to scale your operations.',
-            button: 'Start a Project with Tunisian Talent'
+            button: 'Start a Project with Our Talent'
         },
         footer: {
             description: 'Empowering businesses with cutting-edge DevOps and MLOps solutions.',
@@ -132,7 +132,7 @@ const translations = {
             mission: 'Our Mission',
             missionText: 'To bridge the gap between complex infrastructure challenges and seamless operational excellence. We believe in automation, scalability, and security as the pillars of modern software delivery.',
             vision: 'Our Vision',
-            visionText: 'To be the global partner of choice for companies looking to leverage the best engineering talent from Tunisia and beyond, fostering a culture of innovation and continuous improvement.',
+            visionText: 'To be the global partner of choice for companies looking to leverage the best engineering talent, fostering a culture of innovation and continuous improvement.',
             whyChoose: 'Why Choose Us?',
             reasons: [
                 'Expertise in Cloud Native Technologies',
@@ -180,7 +180,7 @@ const translations = {
             openPositions: 'Open Positions',
             applyBtn: 'Apply Now',
             location: 'Location',
-            remote: 'Remote / Tunisia',
+            remote: 'Remote',
             aboutRole: 'About the Role',
             keyResponsibilities: 'Key Responsibilities',
             requiredQualifications: 'Required Qualifications',
@@ -465,9 +465,9 @@ const translations = {
             }
         },
         cta: {
-            title: 'Prêt à Exploiter les Talents Technologiques Tunisiens?',
+            title: 'Prêt à Exploiter Nos Talents?',
             description: 'Laissez Devaura vous connecter avec les meilleurs ingénieurs DevOps et MLOps pour développer vos opérations.',
-            button: 'Démarrer un Projet avec des Talents Tunisiens'
+            button: 'Démarrer un Projet avec Nos Talents'
         },
         footer: {
             description: 'Donner aux entreprises les moyens de réussir avec des solutions DevOps et MLOps de pointe.',
@@ -516,7 +516,7 @@ const translations = {
             mission: 'Notre Mission',
             missionText: 'Combler le fossé entre les défis d\'infrastructure complexes et l\'excellence opérationnelle sans faille. Nous croyons en l\'automatisation, l\'évolutivité et la sécurité comme piliers de la livraison logicielle moderne.',
             vision: 'Notre Vision',
-            visionText: 'Être le partenaire mondial de choix pour les entreprises cherchant à tirer parti des meilleurs talents en ingénierie de Tunisie et d\'ailleurs, favorisant une culture d\'innovation et d\'amélioration continue.',
+            visionText: 'Être le partenaire mondial de choix pour les entreprises cherchant à tirer parti des meilleurs talents en ingénierie, favorisant une culture d\'innovation et d\'amélioration continue.',
             whyChoose: 'Pourquoi Nous Choisir?',
             reasons: [
                 'Expertise en Technologies Cloud Natives',
@@ -564,7 +564,7 @@ const translations = {
             openPositions: 'Postes Ouverts',
             applyBtn: 'Postuler Maintenant',
             location: 'Emplacement',
-            remote: 'À Distance / Tunisie',
+            remote: 'À Distance',
             aboutRole: 'À Propos du Rôle',
             keyResponsibilities: 'Responsabilités Clés',
             requiredQualifications: 'Qualifications Requises',
@@ -843,9 +843,9 @@ const translations = {
             }
         },
         cta: {
-            title: '¿Listo para Aprovechar el Talento Tecnológico de Túnez?',
+            title: '¿Listo para Aprovechar Nuestro Talento?',
             description: 'Deje que Devaura lo conecte con los mejores ingenieros de DevOps y MLOps para escalar sus operaciones.',
-            button: 'Iniciar un Proyecto con Talento Tunecino'
+            button: 'Iniciar un Proyecto con Nuestro Talento'
         },
         footer: {
             description: 'Empoderando empresas con soluciones DevOps y MLOps de vanguardia.',
@@ -894,7 +894,7 @@ const translations = {
             mission: 'Nuestra Misión',
             missionText: 'Cerrar la brecha entre los desafíos complejos de infraestructura y la excelencia operacional sin problemas. Creemos en la automatización, escalabilidad y seguridad como los pilares de la entrega de software moderna.',
             vision: 'Nuestra Visión',
-            visionText: 'Ser el socio global de elección para empresas que buscan aprovechar el mejor talento de ingeniería de Túnez y más allá, fomentando una cultura de innovación y mejora continua.',
+            visionText: 'Ser el socio global de elección para empresas que buscan aprovechar el mejor talento de ingeniería, fomentando una cultura de innovación y mejora continua.',
             whyChoose: '¿Por Qué Elegirnos?',
             reasons: [
                 'Experiencia en Tecnologías Nativas de la Nube',
@@ -942,7 +942,7 @@ const translations = {
             openPositions: 'Posiciones Abiertas',
             applyBtn: 'Aplicar Ahora',
             location: 'Ubicación',
-            remote: 'Remoto / Túnez',
+            remote: 'Remoto',
             aboutRole: 'Sobre el Rol',
             keyResponsibilities: 'Responsabilidades Clave',
             requiredQualifications: 'Calificaciones Requeridas',
@@ -1221,9 +1221,9 @@ const translations = {
             }
         },
         cta: {
-            title: 'هل أنت مستعد للاستفادة من المواهب التقنية التونسية؟',
+            title: 'هل أنت مستعد للاستفادة من مواهبنا؟',
             description: 'دع ديفأورا تربطك بأفضل مهندسي DevOps و MLOps لتوسيع عملياتك.',
-            button: 'ابدأ مشروعًا مع المواهب التونسية'
+            button: 'ابدأ مشروعًا مع مواهبنا'
         },
         footer: {
             description: 'تمكين الشركات بحلول DevOps و MLOps المتطورة.',
@@ -1272,7 +1272,7 @@ const translations = {
             mission: 'مهمتنا',
             missionText: 'سد الفجوة بين تحديات البنية التحتية المعقدة والتميز التشغيلي السلس. نحن نؤمن بالأتمتة وقابلية التوسع والأمان كأعمدة لتسليم البرمجيات الحديثة.',
             vision: 'رؤيتنا',
-            visionText: 'أن نكون الشريك العالمي المفضل للشركات التي تتطلع إلى الاستفادة من أفضل المواهب الهندسية من تونس وخارجها، وتعزيز ثقافة الابتكار والتحسين المستمر.',
+            visionText: 'أن نكون الشريك العالمي المفضل للشركات التي تتطلع إلى الاستفادة من أفضل المواهب الهندسية، وتعزيز ثقافة الابتكار والتحسين المستمر.',
             whyChoose: 'لماذا تختارنا؟',
             reasons: [
                 'خبرة في تقنيات السحابة الأصلية',
@@ -1320,7 +1320,7 @@ const translations = {
             openPositions: 'الوظائف المتاحة',
             applyBtn: 'تقدم الآن',
             location: 'الموقع',
-            remote: 'عن بُعد / تونس',
+            remote: 'عن بُعد',
             aboutRole: 'عن الوظيفة',
             keyResponsibilities: 'المسؤوليات الرئيسية',
             requiredQualifications: 'المؤهلات المطلوبة',
