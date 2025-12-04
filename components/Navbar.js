@@ -65,9 +65,9 @@ export default function Navbar() {
                         )}
                     </div>
 
-                    <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors">
+                    <a href="https://calendly.com/kmarturki" target="_blank" rel="noopener noreferrer" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors">
                         {t('nav.schedule')}
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -108,9 +108,9 @@ export default function Navbar() {
                             ))}
                         </div>
 
-                        <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full text-center" onClick={() => setIsMenuOpen(false)}>
+                        <a href="https://calendly.com/kmarturki" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2 rounded-full text-center" onClick={() => setIsMenuOpen(false)}>
                             {t('nav.schedule')}
-                        </Link>
+                        </a>
                     </div>
                 </div>
             )}
