@@ -30,6 +30,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-8">
                     <Link href="/" className="text-gray-300 hover:text-white transition-colors">{t('nav.home')}</Link>
                     <Link href="/about" className="text-gray-300 hover:text-white transition-colors">{t('nav.about')}</Link>
+                    <Link href="/services" className="text-gray-300 hover:text-white transition-colors">{t('nav.services')}</Link>
                     <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">{t('nav.careers')}</Link>
                     <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">{t('nav.contact')}</Link>
 
@@ -84,6 +85,7 @@ export default function Navbar() {
                     <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
                         <Link href="/" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
                         <Link href="/about" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
+                        <Link href="/services" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.services')}</Link>
                         <Link href="/careers" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.careers')}</Link>
                         <Link href="/contact" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</Link>
 

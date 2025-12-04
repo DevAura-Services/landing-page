@@ -7,6 +7,7 @@ const translations = {
         nav: {
             home: 'Home',
             about: 'About Us',
+            services: 'Services',
             careers: 'Careers',
             contact: 'Contact Us',
             schedule: 'Schedule Consultation'
@@ -23,24 +24,61 @@ const translations = {
             description: 'We leverage a modern stack of leading technologies to build robust and scalable solutions for our clients.'
         },
         services: {
-            title: 'A Hub of Unmatched Advantages',
-            description: 'From a deep talent pool to a thriving tech ecosystem, Tunisia offers a unique combination of benefits for global tech companies.',
-            talent: {
-                title: 'Top-Tier Talent',
-                desc: 'Access a growing pool of highly skilled, multilingual engineers.'
-            },
-            cost: {
-                title: 'Cost-Effectiveness',
-                desc: 'Benefit from competitive operational costs without compromising quality.'
-            },
-            location: {
-                title: 'Strategic Location',
-                desc: 'Ideal time zone alignment for seamless collaboration.'
-            },
-            ecosystem: {
-                title: 'Thriving Ecosystem',
-                desc: 'A supportive environment with government incentives and innovation hubs.'
+            title: 'Our Expertise',
+            subtitle: 'Comprehensive DevOps & MLOps Solutions',
+            description: 'We help businesses modernize their infrastructure, automate workflows, and accelerate innovation through our core service pillars.',
+            pillars: {
+                devops: {
+                    title: 'DevOps Transformation',
+                    tagline: 'Streamline your delivery pipeline',
+                    desc: 'Accelerate your software delivery with robust CI/CD pipelines, Infrastructure as Code, and container orchestration.',
+                    features: ['CI/CD Pipeline Automation', 'Infrastructure as Code (IaC)', 'Kubernetes & Docker', 'GitOps Implementation']
+                },
+                cloud: {
+                    title: 'Cloud Architecture',
+                    tagline: 'Scalable, secure, and cost-effective',
+                    desc: 'Design and migrate to cloud-native architectures that scale with your business while optimizing costs.',
+                    features: ['Cloud Migration (AWS/Azure/GCP)', 'Serverless Architecture', 'FinOps & Cost Optimization', 'Multi-Cloud Strategy']
+                },
+                mlops: {
+                    title: 'MLOps & AI',
+                    tagline: 'From model to production, faster',
+                    desc: 'Bridge the gap between data science and operations with automated ML pipelines and scalable model serving.',
+                    features: ['Automated ML Pipelines', 'Model Serving & Monitoring', 'Feature Stores', 'GPU Cluster Management']
+                },
+                sre: {
+                    title: 'Site Reliability Engineering',
+                    tagline: 'Guaranteed uptime and performance',
+                    desc: 'Ensure your systems are reliable, scalable, and observable with our SRE practices.',
+                    features: ['24/7 Monitoring & Alerting', 'Incident Response', 'SLO/SLI Definition', 'Performance Tuning']
+                },
+                security: {
+                    title: 'DevSecOps',
+                    tagline: 'Security at the speed of code',
+                    desc: 'Integrate security into every stage of your development lifecycle without slowing down delivery.',
+                    features: ['Automated Security Scanning', 'Compliance Automation', 'Secrets Management', 'Vulnerability Assessment']
+                }
             }
+        },
+        application: {
+            title: 'Apply for',
+            personalInfo: 'Personal Information',
+            fullName: 'Full Name',
+            email: 'Email Address',
+            phone: 'Phone Number',
+            linkedin: 'LinkedIn Profile URL',
+            portfolio: 'Portfolio / GitHub URL',
+            experience: 'Experience',
+            yearsExp: 'Years of Experience',
+            currentCompany: 'Current Company (Optional)',
+            noticePeriod: 'Notice Period',
+            resume: 'Resume / CV',
+            coverLetter: 'Cover Letter (Optional)',
+            whyFit: 'Why are you a good fit for this role?',
+            submit: 'Submit Application',
+            successTitle: 'Application Submitted!',
+            successMsg: 'Thank you for applying. We will review your application and get back to you soon.',
+            backToJobs: 'Back to Jobs'
         },
         cta: {
             title: 'Ready to Leverage Tunisia\'s Tech Talent?',
@@ -143,30 +181,246 @@ const translations = {
             applyBtn: 'Apply Now',
             location: 'Location',
             remote: 'Remote / Tunisia',
+            aboutRole: 'About the Role',
+            keyResponsibilities: 'Key Responsibilities',
+            requiredQualifications: 'Required Qualifications',
+            niceToHave: 'Nice to Have',
+            whatWeOffer: 'What We Offer',
+            requiredSkills: 'Required Skills',
             jobs: [
                 {
+                    slug: 'devops-engineer',
                     title: 'DevOps Engineer',
-                    description: 'Build and maintain CI/CD pipelines, manage Kubernetes clusters, and implement infrastructure as code.'
+                    description: 'Build and maintain CI/CD pipelines, manage Kubernetes clusters, and implement infrastructure as code.',
+                    aboutRole: 'Join our infrastructure team to build and maintain robust CI/CD pipelines, manage Kubernetes clusters, and implement infrastructure as code. You will play a crucial role in ensuring our systems are scalable, reliable, and secure.',
+                    responsibilities: [
+                        'Design, implement, and maintain CI/CD pipelines using GitLab CI, Jenkins, or GitHub Actions',
+                        'Manage and optimize Kubernetes clusters for production workloads',
+                        'Implement infrastructure as code using Terraform or CloudFormation',
+                        'Monitor system performance and implement alerting solutions',
+                        'Ensure security best practices across all infrastructure components',
+                        'Collaborate with development teams to improve deployment processes',
+                        'Automate repetitive tasks and improve operational efficiency'
+                    ],
+                    qualifications: [
+                        'Bachelor\'s degree in Computer Science, Engineering, or related field',
+                        '3-5 years of experience in DevOps or Site Reliability Engineering',
+                        'Strong experience with Kubernetes and container orchestration',
+                        'Proficiency in at least one scripting language (Python, Bash, Go)',
+                        'Experience with infrastructure as code tools (Terraform, Ansible)',
+                        'Knowledge of cloud platforms (AWS, Azure, or GCP)',
+                        'Understanding of networking, security, and system administration'
+                    ],
+                    niceToHave: [
+                        'Certifications (CKA, AWS Solutions Architect, etc.)',
+                        'Experience with monitoring tools (Prometheus, Grafana, ELK)',
+                        'Knowledge of service mesh technologies (Istio, Linkerd)',
+                        'Experience with GitOps practices',
+                        'Familiarity with security scanning and compliance tools'
+                    ],
+                    benefits: [
+                        'Competitive salary with annual reviews',
+                        'Health insurance coverage',
+                        'Flexible working hours and remote options',
+                        'Training and certification budget',
+                        'Modern office environment',
+                        'Career growth opportunities'
+                    ]
                 },
                 {
+                    slug: 'mlops-engineer',
                     title: 'MLOps Engineer',
-                    description: 'Design and deploy ML pipelines, manage model lifecycle, and ensure scalable ML infrastructure.'
+                    description: 'Design and deploy ML pipelines, manage model lifecycle, and ensure scalable ML infrastructure.',
+                    aboutRole: 'Join our ML team to design, build, and maintain production ML pipelines. You will work closely with data scientists to deploy, monitor, and scale machine learning models in production environments.',
+                    responsibilities: [
+                        'Build and maintain ML pipelines for model training and deployment',
+                        'Implement MLOps best practices and workflows',
+                        'Monitor model performance and detect drift',
+                        'Automate model retraining and deployment processes',
+                        'Manage ML infrastructure and compute resources',
+                        'Collaborate with data scientists on model optimization',
+                        'Ensure reproducibility and versioning of ML experiments'
+                    ],
+                    qualifications: [
+                        'Bachelor\'s degree in Computer Science, Data Science, or related field',
+                        '3+ years of experience in MLOps or ML Engineering',
+                        'Strong understanding of ML model lifecycle',
+                        'Experience with ML frameworks (TensorFlow, PyTorch, scikit-learn)',
+                        'Proficiency in Python and ML libraries',
+                        'Knowledge of containerization and orchestration (Docker, Kubernetes)',
+                        'Experience with model serving platforms (TensorFlow Serving, MLflow)'
+                    ],
+                    niceToHave: [
+                        'Experience with cloud ML services (SageMaker, Vertex AI)',
+                        'Knowledge of model monitoring tools',
+                        'Understanding of feature stores',
+                        'Experience with distributed training',
+                        'Familiarity with AutoML platforms'
+                    ],
+                    benefits: [
+                        'Competitive salary with performance bonuses',
+                        'Access to latest ML tools and platforms',
+                        'Conference and training opportunities',
+                        'Flexible working arrangements',
+                        'Health and wellness benefits',
+                        'Collaborative team environment'
+                    ]
                 },
                 {
+                    slug: 'cloud-architect',
                     title: 'Cloud Architect',
-                    description: 'Design cloud-native solutions, optimize cloud infrastructure, and lead cloud migration projects.'
+                    description: 'Design cloud-native solutions, optimize cloud infrastructure, and lead cloud migration projects.',
+                    aboutRole: 'Lead the design and implementation of cloud-native solutions for our clients. You will architect scalable, secure, and cost-effective cloud infrastructure while mentoring junior team members.',
+                    responsibilities: [
+                        'Design and architect cloud solutions on AWS, Azure, or GCP',
+                        'Lead cloud migration projects for enterprise clients',
+                        'Optimize cloud costs and resource utilization',
+                        'Implement security and compliance best practices',
+                        'Create architectural documentation and diagrams',
+                        'Provide technical leadership and mentorship',
+                        'Evaluate and recommend cloud services and tools'
+                    ],
+                    qualifications: [
+                        'Bachelor\'s degree in Computer Science or related field',
+                        '5+ years of experience in cloud architecture',
+                        'Expert knowledge of at least one major cloud platform',
+                        'Strong understanding of networking, security, and compliance',
+                        'Experience with infrastructure as code',
+                        'Excellent communication and presentation skills',
+                        'Cloud certifications (AWS Solutions Architect, Azure Architect, etc.)'
+                    ],
+                    niceToHave: [
+                        'Multi-cloud experience',
+                        'Enterprise architecture frameworks knowledge (TOGAF)',
+                        'Experience with FinOps practices',
+                        'Knowledge of serverless architectures',
+                        'Previous consulting experience'
+                    ],
+                    benefits: [
+                        'Premium salary package',
+                        'Certification and training budget',
+                        'Flexible schedule and remote work',
+                        'Health insurance for family',
+                        'Annual performance bonuses',
+                        'Leadership development programs'
+                    ]
                 },
                 {
+                    slug: 'site-reliability-engineer',
                     title: 'Site Reliability Engineer',
-                    description: 'Ensure system reliability, implement monitoring solutions, and optimize performance at scale.'
+                    description: 'Ensure system reliability, implement monitoring solutions, and optimize performance at scale.',
+                    aboutRole: 'Join our SRE team to ensure the reliability, performance, and availability of our production systems. You will design and implement monitoring solutions, incident response procedures, and automation tools.',
+                    responsibilities: [
+                        'Design and implement comprehensive monitoring and alerting systems',
+                        'Respond to and resolve production incidents',
+                        'Conduct post-mortem analysis and implement preventive measures',
+                        'Optimize system performance and scalability',
+                        'Automate operational tasks and workflows',
+                        'Define and track SLIs, SLOs, and error budgets',
+                        'Build and maintain disaster recovery procedures'
+                    ],
+                    qualifications: [
+                        'Bachelor\'s degree in Computer Science or related field',
+                        '3-5 years of experience in SRE or DevOps',
+                        'Strong programming skills (Python, Go, or similar)',
+                        'Experience with monitoring tools (Prometheus, Grafana, Datadog)',
+                        'Deep understanding of Linux systems and networking',
+                        'Experience with incident management and on-call rotation',
+                        'Knowledge of distributed systems and microservices'
+                    ],
+                    niceToHave: [
+                        'Experience with chaos engineering',
+                        'Knowledge of performance testing tools',
+                        'Understanding of database internals',
+                        'Experience with capacity planning',
+                        'Contributions to open-source projects'
+                    ],
+                    benefits: [
+                        'Competitive compensation',
+                        'On-call rotation compensation',
+                        'Flexible working hours',
+                        'Professional development budget',
+                        'Health benefits',
+                        'Work-life balance support'
+                    ]
                 },
                 {
+                    slug: 'devops-consultant',
                     title: 'DevOps Consultant',
-                    description: 'Guide clients through DevOps transformation, implement best practices, and deliver training.'
+                    description: 'Guide clients through DevOps transformation, implement best practices, and deliver training.',
+                    aboutRole: 'Work as a DevOps consultant helping clients transform their development and operations practices. You will assess current state, design transformation roadmaps, and guide implementation of DevOps best practices.',
+                    responsibilities: [
+                        'Assess client DevOps maturity and identify improvement areas',
+                        'Design and present DevOps transformation roadmaps',
+                        'Implement CI/CD pipelines and automation solutions',
+                        'Deliver workshops and training sessions',
+                        'Provide hands-on implementation support',
+                        'Document best practices and create runbooks',
+                        'Build long-term client relationships'
+                    ],
+                    qualifications: [
+                        'Bachelor\'s degree in Computer Science or related field',
+                        '5+ years of hands-on DevOps experience',
+                        'Strong consulting and client management skills',
+                        'Excellent presentation and communication abilities',
+                        'Experience with multiple CI/CD tools and platforms',
+                        'Knowledge of Agile and DevOps methodologies',
+                        'Ability to work independently and lead projects'
+                    ],
+                    niceToHave: [
+                        'DevOps or cloud certifications',
+                        'Previous consulting firm experience',
+                        'Experience in multiple industries',
+                        'Training delivery experience',
+                        'Multilingual capabilities'
+                    ],
+                    benefits: [
+                        'Premium salary with project bonuses',
+                        'Travel opportunities',
+                        'Professional training budget',
+                        'Flexible work arrangements',
+                        'Health and wellness programs',
+                        'Career advancement paths'
+                    ]
                 },
                 {
+                    slug: 'backend-engineer',
                     title: 'Backend Engineer',
-                    description: 'Develop scalable backend services, APIs, and microservices using modern frameworks.'
+                    description: 'Develop scalable backend services, APIs, and microservices using modern frameworks.',
+                    aboutRole: 'Join our engineering team to build robust, scalable backend services and APIs. You will work on microservices architecture, database design, and API development using modern frameworks and best practices.',
+                    responsibilities: [
+                        'Design and develop RESTful APIs and microservices',
+                        'Write clean, maintainable, and well-tested code',
+                        'Optimize database queries and application performance',
+                        'Implement authentication and authorization systems',
+                        'Integrate third-party services and APIs',
+                        'Participate in code reviews and technical discussions',
+                        'Troubleshoot and resolve production issues'
+                    ],
+                    qualifications: [
+                        'Bachelor\'s degree in Computer Science or related field',
+                        '3+ years of backend development experience',
+                        'Proficiency in at least one backend language (Python, Node.js, Java, Go)',
+                        'Strong understanding of RESTful API design',
+                        'Experience with SQL and NoSQL databases',
+                        'Knowledge of caching strategies (Redis, Memcached)',
+                        'Understanding of authentication/authorization (OAuth, JWT)'
+                    ],
+                    niceToHave: [
+                        'Experience with microservices architecture',
+                        'Knowledge of message queues (RabbitMQ, Kafka)',
+                        'GraphQL experience',
+                        'Understanding of Domain-Driven Design',
+                        'Contributions to open-source projects'
+                    ],
+                    benefits: [
+                        'Competitive salary',
+                        'Flexible working hours',
+                        'Remote work options',
+                        'Learning and development budget',
+                        'Health insurance',
+                        'Team building activities'
+                    ]
                 }
             ]
         }
@@ -311,30 +565,240 @@ const translations = {
             applyBtn: 'Postuler Maintenant',
             location: 'Emplacement',
             remote: 'À Distance / Tunisie',
+            aboutRole: 'À Propos du Rôle',
+            keyResponsibilities: 'Responsabilités Clés',
+            requiredQualifications: 'Qualifications Requises',
+            niceToHave: 'Atouts',
+            whatWeOffer: 'Ce Que Nous Offrons',
+            requiredSkills: 'Compétences Requises',
             jobs: [
                 {
+                    slug: 'devops-engineer',
                     title: 'Ingénieur DevOps',
-                    description: 'Construire et maintenir des pipelines CI/CD, gérer des clusters Kubernetes et implémenter l\'infrastructure as code.'
+                    description: 'Construire et maintenir des pipelines CI/CD, gérer des clusters Kubernetes et implémenter l\'infrastructure as code.',
+                    aboutRole: 'Rejoignez notre équipe infrastructure pour construire et maintenir des pipelines CI/CD robustes, gérer des clusters Kubernetes et implémenter l\'infrastructure as code.',
+                    responsibilities: [
+                        'Concevoir et maintenir des pipelines CI/CD (GitLab CI, Jenkins, GitHub Actions)',
+                        'Gérer et optimiser les clusters Kubernetes pour la production',
+                        'Implémenter l\'infrastructure as code (Terraform, CloudFormation)',
+                        'Surveiller les performances du système et mettre en place des alertes',
+                        'Assurer la sécurité de l\'infrastructure',
+                        'Collaborer avec les équipes de développement',
+                        'Automatiser les tâches répétitives'
+                    ],
+                    qualifications: [
+                        'Diplôme en Informatique ou domaine connexe',
+                        '3-5 ans d\'expérience en DevOps ou SRE',
+                        'Forte expérience avec Kubernetes',
+                        'Maîtrise d\'un langage de script (Python, Bash, Go)',
+                        'Expérience avec l\'infrastructure as code (Terraform, Ansible)',
+                        'Connaissance des plateformes cloud (AWS, Azure, GCP)',
+                        'Compréhension des réseaux et de la sécurité'
+                    ],
+                    niceToHave: [
+                        'Certifications (CKA, AWS Solutions Architect)',
+                        'Expérience avec les outils de monitoring (Prometheus, Grafana)',
+                        'Connaissance du Service Mesh (Istio)',
+                        'Expérience GitOps',
+                        'Outils de sécurité et conformité'
+                    ],
+                    benefits: [
+                        'Salaire compétitif',
+                        'Assurance santé',
+                        'Horaires flexibles et télétravail',
+                        'Budget formation et certification',
+                        'Bureau moderne',
+                        'Opportunités de carrière'
+                    ]
                 },
                 {
+                    slug: 'mlops-engineer',
                     title: 'Ingénieur MLOps',
-                    description: 'Concevoir et déployer des pipelines ML, gérer le cycle de vie des modèles et assurer une infrastructure ML évolutive.'
+                    description: 'Concevoir et déployer des pipelines ML, gérer le cycle de vie des modèles et assurer une infrastructure ML évolutive.',
+                    aboutRole: 'Rejoignez notre équipe ML pour concevoir et maintenir des pipelines ML en production.',
+                    responsibilities: [
+                        'Construire des pipelines ML pour l\'entraînement et le déploiement',
+                        'Implémenter les meilleures pratiques MLOps',
+                        'Surveiller la performance des modèles',
+                        'Automatiser le réentraînement des modèles',
+                        'Gérer l\'infrastructure ML',
+                        'Collaborer avec les data scientists'
+                    ],
+                    qualifications: [
+                        'Diplôme en Informatique ou Data Science',
+                        '3+ ans d\'expérience en MLOps',
+                        'Compréhension du cycle de vie ML',
+                        'Expérience avec les frameworks ML (TensorFlow, PyTorch)',
+                        'Maîtrise de Python',
+                        'Docker et Kubernetes',
+                        'Plateformes de serving (TensorFlow Serving, MLflow)'
+                    ],
+                    niceToHave: [
+                        'Services ML Cloud (SageMaker, Vertex AI)',
+                        'Outils de monitoring de modèles',
+                        'Feature stores',
+                        'Entraînement distribué',
+                        'AutoML'
+                    ],
+                    benefits: [
+                        'Salaire compétitif',
+                        'Outils ML de pointe',
+                        'Conférences et formations',
+                        'Travail flexible',
+                        'Avantages santé',
+                        'Équipe collaborative'
+                    ]
                 },
                 {
+                    slug: 'cloud-architect',
                     title: 'Architecte Cloud',
-                    description: 'Concevoir des solutions cloud-native, optimiser l\'infrastructure cloud et diriger des projets de migration cloud.'
+                    description: 'Concevoir des solutions cloud-native, optimiser l\'infrastructure cloud et diriger des projets de migration cloud.',
+                    aboutRole: 'Dirigez la conception et l\'implémentation de solutions cloud-native pour nos clients.',
+                    responsibilities: [
+                        'Concevoir des solutions cloud (AWS, Azure, GCP)',
+                        'Diriger des projets de migration cloud',
+                        'Optimiser les coûts et l\'utilisation',
+                        'Implémenter la sécurité et la conformité',
+                        'Créer la documentation technique',
+                        'Mentorat technique'
+                    ],
+                    qualifications: [
+                        'Diplôme en Informatique',
+                        '5+ ans d\'expérience en architecture cloud',
+                        'Expertise sur une plateforme cloud majeure',
+                        'Réseaux et sécurité',
+                        'Infrastructure as code',
+                        'Communication excellente',
+                        'Certifications Cloud'
+                    ],
+                    niceToHave: [
+                        'Expérience multi-cloud',
+                        'TOGAF',
+                        'FinOps',
+                        'Serverless',
+                        'Expérience en conseil'
+                    ],
+                    benefits: [
+                        'Salaire premium',
+                        'Budget certification',
+                        'Horaires flexibles',
+                        'Assurance santé famille',
+                        'Bonus de performance',
+                        'Développement du leadership'
+                    ]
                 },
                 {
+                    slug: 'site-reliability-engineer',
                     title: 'Ingénieur Site Reliability',
-                    description: 'Assurer la fiabilité du système, implémenter des solutions de surveillance et optimiser les performances à grande échelle.'
+                    description: 'Assurer la fiabilité du système, implémenter des solutions de surveillance et optimiser les performances à grande échelle.',
+                    aboutRole: 'Rejoignez notre équipe SRE pour assurer la fiabilité et la performance de nos systèmes.',
+                    responsibilities: [
+                        'Concevoir des systèmes de monitoring',
+                        'Gérer les incidents de production',
+                        'Analyses post-mortem',
+                        'Optimiser la performance',
+                        'Automatiser les tâches opérationnelles',
+                        'Définir SLIs et SLOs'
+                    ],
+                    qualifications: [
+                        'Diplôme en Informatique',
+                        '3-5 ans d\'expérience SRE/DevOps',
+                        'Programmation (Python, Go)',
+                        'Monitoring (Prometheus, Grafana)',
+                        'Linux et réseaux',
+                        'Gestion d\'incidents'
+                    ],
+                    niceToHave: [
+                        'Chaos engineering',
+                        'Tests de performance',
+                        'Bases de données',
+                        'Capacity planning',
+                        'Open source'
+                    ],
+                    benefits: [
+                        'Rémunération compétitive',
+                        'Compensation astreintes',
+                        'Horaires flexibles',
+                        'Budget développement pro',
+                        'Avantages santé',
+                        'Équilibre vie-travail'
+                    ]
                 },
                 {
+                    slug: 'devops-consultant',
                     title: 'Consultant DevOps',
-                    description: 'Guider les clients à travers la transformation DevOps, implémenter les meilleures pratiques et offrir des formations.'
+                    description: 'Guider les clients à travers la transformation DevOps, implémenter les meilleures pratiques et offrir des formations.',
+                    aboutRole: 'Aidez nos clients à transformer leurs pratiques de développement et d\'opérations.',
+                    responsibilities: [
+                        'Évaluer la maturité DevOps',
+                        'Concevoir des feuilles de route de transformation',
+                        'Implémenter CI/CD',
+                        'Animer des ateliers et formations',
+                        'Support à l\'implémentation',
+                        'Documentation et runbooks'
+                    ],
+                    qualifications: [
+                        'Diplôme en Informatique',
+                        '5+ ans d\'expérience DevOps',
+                        'Compétences en conseil',
+                        'Présentation et communication',
+                        'Outils CI/CD multiples',
+                        'Agile et DevOps',
+                        'Autonomie'
+                    ],
+                    niceToHave: [
+                        'Certifications DevOps/Cloud',
+                        'Expérience en cabinet de conseil',
+                        'Expérience multi-secteurs',
+                        'Expérience de formation',
+                        'Multilingue'
+                    ],
+                    benefits: [
+                        'Salaire premium et bonus',
+                        'Opportunités de voyage',
+                        'Budget formation',
+                        'Travail flexible',
+                        'Programmes santé',
+                        'Progression de carrière'
+                    ]
                 },
                 {
+                    slug: 'backend-engineer',
                     title: 'Ingénieur Backend',
-                    description: 'Développer des services backend évolutifs, des API et des microservices en utilisant des frameworks modernes.'
+                    description: 'Développer des services backend évolutifs, des API et des microservices en utilisant des frameworks modernes.',
+                    aboutRole: 'Construisez des services backend robustes et évolutifs.',
+                    responsibilities: [
+                        'Concevoir et développer des API RESTful',
+                        'Code propre et testé',
+                        'Optimiser les performances',
+                        'Authentification et autorisation',
+                        'Intégration d\'API tierces',
+                        'Revue de code'
+                    ],
+                    qualifications: [
+                        'Diplôme en Informatique',
+                        '3+ ans d\'expérience backend',
+                        'Langage backend (Python, Node.js, Java, Go)',
+                        'Conception API RESTful',
+                        'Bases de données SQL/NoSQL',
+                        'Caching (Redis)',
+                        'Auth (OAuth, JWT)'
+                    ],
+                    niceToHave: [
+                        'Microservices',
+                        'Message queues (RabbitMQ, Kafka)',
+                        'GraphQL',
+                        'DDD',
+                        'Open source'
+                    ],
+                    benefits: [
+                        'Salaire compétitif',
+                        'Horaires flexibles',
+                        'Télétravail',
+                        'Budget formation',
+                        'Assurance santé',
+                        'Activités d\'équipe'
+                    ]
                 }
             ]
         }
@@ -479,30 +943,240 @@ const translations = {
             applyBtn: 'Aplicar Ahora',
             location: 'Ubicación',
             remote: 'Remoto / Túnez',
+            aboutRole: 'Sobre el Rol',
+            keyResponsibilities: 'Responsabilidades Clave',
+            requiredQualifications: 'Calificaciones Requeridas',
+            niceToHave: 'Deseable',
+            whatWeOffer: 'Lo Que Ofrecemos',
+            requiredSkills: 'Habilidades Requeridas',
             jobs: [
                 {
+                    slug: 'devops-engineer',
                     title: 'Ingeniero DevOps',
-                    description: 'Construir y mantener pipelines CI/CD, gestionar clústeres Kubernetes e implementar infraestructura como código.'
+                    description: 'Construir y mantener pipelines CI/CD, gestionar clústeres Kubernetes e implementar infraestructura como código.',
+                    aboutRole: 'Únete a nuestro equipo de infraestructura para construir y mantener pipelines CI/CD robustos.',
+                    responsibilities: [
+                        'Diseñar y mantener pipelines CI/CD',
+                        'Gestionar clústeres Kubernetes',
+                        'Implementar infraestructura como código',
+                        'Monitorear el rendimiento del sistema',
+                        'Asegurar la seguridad de la infraestructura',
+                        'Colaborar con equipos de desarrollo',
+                        'Automatizar tareas repetitivas'
+                    ],
+                    qualifications: [
+                        'Título en Informática o campo relacionado',
+                        '3-5 años de experiencia en DevOps o SRE',
+                        'Experiencia con Kubernetes',
+                        'Dominio de scripting (Python, Bash, Go)',
+                        'Experiencia con IaC (Terraform, Ansible)',
+                        'Conocimiento de nubes (AWS, Azure, GCP)',
+                        'Redes y seguridad'
+                    ],
+                    niceToHave: [
+                        'Certificaciones (CKA, AWS)',
+                        'Herramientas de monitoreo',
+                        'Service Mesh',
+                        'GitOps',
+                        'Herramientas de seguridad'
+                    ],
+                    benefits: [
+                        'Salario competitivo',
+                        'Seguro de salud',
+                        'Horario flexible',
+                        'Presupuesto de formación',
+                        'Oficina moderna',
+                        'Crecimiento profesional'
+                    ]
                 },
                 {
+                    slug: 'mlops-engineer',
                     title: 'Ingeniero MLOps',
-                    description: 'Diseñar e implementar pipelines ML, gestionar el ciclo de vida de modelos y asegurar infraestructura ML escalable.'
+                    description: 'Diseñar e implementar pipelines ML, gestionar el ciclo de vida de modelos y asegurar infraestructura ML escalable.',
+                    aboutRole: 'Únete a nuestro equipo de ML para diseñar y mantener pipelines de ML en producción.',
+                    responsibilities: [
+                        'Construir pipelines de ML',
+                        'Implementar mejores prácticas de MLOps',
+                        'Monitorear rendimiento de modelos',
+                        'Automatizar reentrenamiento',
+                        'Gestionar infraestructura ML',
+                        'Colaborar con científicos de datos'
+                    ],
+                    qualifications: [
+                        'Título en Informática o Ciencia de Datos',
+                        '3+ años de experiencia en MLOps',
+                        'Ciclo de vida de ML',
+                        'Frameworks ML (TensorFlow, PyTorch)',
+                        'Python',
+                        'Docker y Kubernetes',
+                        'Plataformas de serving'
+                    ],
+                    niceToHave: [
+                        'Servicios ML en la nube',
+                        'Monitoreo de modelos',
+                        'Feature stores',
+                        'Entrenamiento distribuido',
+                        'AutoML'
+                    ],
+                    benefits: [
+                        'Salario competitivo',
+                        'Herramientas ML modernas',
+                        'Conferencias y formación',
+                        'Trabajo flexible',
+                        'Beneficios de salud',
+                        'Equipo colaborativo'
+                    ]
                 },
                 {
+                    slug: 'cloud-architect',
                     title: 'Arquitecto Cloud',
-                    description: 'Diseñar soluciones cloud-native, optimizar infraestructura cloud y liderar proyectos de migración cloud.'
+                    description: 'Diseñar soluciones cloud-native, optimizar infraestructura cloud y liderar proyectos de migración cloud.',
+                    aboutRole: 'Lidera el diseño e implementación de soluciones cloud-native.',
+                    responsibilities: [
+                        'Diseñar soluciones cloud',
+                        'Liderar migraciones cloud',
+                        'Optimizar costos',
+                        'Implementar seguridad',
+                        'Documentación técnica',
+                        'Mentoría técnica'
+                    ],
+                    qualifications: [
+                        'Título en Informática',
+                        '5+ años en arquitectura cloud',
+                        'Experiencia en plataforma cloud mayor',
+                        'Redes y seguridad',
+                        'Infraestructura como código',
+                        'Comunicación excelente',
+                        'Certificaciones Cloud'
+                    ],
+                    niceToHave: [
+                        'Experiencia multi-cloud',
+                        'TOGAF',
+                        'FinOps',
+                        'Serverless',
+                        'Consultoría'
+                    ],
+                    benefits: [
+                        'Salario premium',
+                        'Presupuesto certificación',
+                        'Horario flexible',
+                        'Seguro familiar',
+                        'Bonos',
+                        'Liderazgo'
+                    ]
                 },
                 {
+                    slug: 'site-reliability-engineer',
                     title: 'Ingeniero Site Reliability',
-                    description: 'Asegurar la confiabilidad del sistema, implementar soluciones de monitoreo y optimizar el rendimiento a escala.'
+                    description: 'Asegurar la confiabilidad del sistema, implementar soluciones de monitoreo y optimizar el rendimiento a escala.',
+                    aboutRole: 'Únete a nuestro equipo SRE para asegurar la confiabilidad del sistema.',
+                    responsibilities: [
+                        'Diseñar sistemas de monitoreo',
+                        'Gestionar incidentes',
+                        'Análisis post-mortem',
+                        'Optimizar rendimiento',
+                        'Automatizar operaciones',
+                        'Definir SLIs y SLOs'
+                    ],
+                    qualifications: [
+                        'Título en Informática',
+                        '3-5 años en SRE/DevOps',
+                        'Programación (Python, Go)',
+                        'Monitoreo (Prometheus, Grafana)',
+                        'Linux y redes',
+                        'Gestión de incidentes'
+                    ],
+                    niceToHave: [
+                        'Chaos engineering',
+                        'Pruebas de rendimiento',
+                        'Bases de datos',
+                        'Capacity planning',
+                        'Open source'
+                    ],
+                    benefits: [
+                        'Compensación competitiva',
+                        'Compensación guardias',
+                        'Horario flexible',
+                        'Desarrollo profesional',
+                        'Beneficios salud',
+                        'Balance vida-trabajo'
+                    ]
                 },
                 {
+                    slug: 'devops-consultant',
                     title: 'Consultor DevOps',
-                    description: 'Guiar a los clientes a través de la transformación DevOps, implementar mejores prácticas y brindar capacitación.'
+                    description: 'Guiar a los clientes a través de la transformación DevOps, implementar mejores prácticas y brindar capacitación.',
+                    aboutRole: 'Ayuda a clientes a transformar sus prácticas DevOps.',
+                    responsibilities: [
+                        'Evaluar madurez DevOps',
+                        'Diseñar roadmaps',
+                        'Implementar CI/CD',
+                        'Impartir talleres',
+                        'Soporte implementación',
+                        'Documentación'
+                    ],
+                    qualifications: [
+                        'Título en Informática',
+                        '5+ años experiencia DevOps',
+                        'Habilidades consultoría',
+                        'Presentación y comunicación',
+                        'Herramientas CI/CD',
+                        'Agile y DevOps',
+                        'Autonomía'
+                    ],
+                    niceToHave: [
+                        'Certificaciones',
+                        'Experiencia consultoría',
+                        'Multi-industria',
+                        'Experiencia formación',
+                        'Multilingüe'
+                    ],
+                    benefits: [
+                        'Salario premium y bonos',
+                        'Oportunidades viaje',
+                        'Presupuesto formación',
+                        'Trabajo flexible',
+                        'Programas bienestar',
+                        'Carrera profesional'
+                    ]
                 },
                 {
+                    slug: 'backend-engineer',
                     title: 'Ingeniero Backend',
-                    description: 'Desarrollar servicios backend escalables, APIs y microservicios usando frameworks modernos.'
+                    description: 'Desarrollar servicios backend escalables, APIs y microservicios usando frameworks modernos.',
+                    aboutRole: 'Construye servicios backend robustos y escalables.',
+                    responsibilities: [
+                        'Diseñar APIs RESTful',
+                        'Código limpio',
+                        'Optimizar rendimiento',
+                        'Autenticación',
+                        'Integraciones',
+                        'Code reviews'
+                    ],
+                    qualifications: [
+                        'Título en Informática',
+                        '3+ años backend',
+                        'Lenguaje backend',
+                        'Diseño API',
+                        'Bases de datos',
+                        'Caching',
+                        'Auth'
+                    ],
+                    niceToHave: [
+                        'Microservicios',
+                        'Message queues',
+                        'GraphQL',
+                        'DDD',
+                        'Open source'
+                    ],
+                    benefits: [
+                        'Salario competitivo',
+                        'Horario flexible',
+                        'Remoto',
+                        'Presupuesto aprendizaje',
+                        'Seguro salud',
+                        'Actividades equipo'
+                    ]
                 }
             ]
         }
@@ -647,30 +1321,240 @@ const translations = {
             applyBtn: 'تقدم الآن',
             location: 'الموقع',
             remote: 'عن بُعد / تونس',
+            aboutRole: 'عن الوظيفة',
+            keyResponsibilities: 'المسؤوليات الرئيسية',
+            requiredQualifications: 'المؤهلات المطلوبة',
+            niceToHave: 'يفضل أن يكون لديك',
+            whatWeOffer: 'ما نقدمه',
+            requiredSkills: 'المهارات المطلوبة',
             jobs: [
                 {
+                    slug: 'devops-engineer',
                     title: 'مهندس DevOps',
-                    description: 'بناء وصيانة خطوط CI/CD، إدارة مجموعات Kubernetes وتنفيذ البنية التحتية كرمز.'
+                    description: 'بناء وصيانة خطوط CI/CD، إدارة مجموعات Kubernetes وتنفيذ البنية التحتية كرمز.',
+                    aboutRole: 'انضم إلى فريق البنية التحتية لبناء وصيانة خطوط CI/CD قوية.',
+                    responsibilities: [
+                        'تصميم وصيانة خطوط CI/CD',
+                        'إدارة مجموعات Kubernetes',
+                        'تنفيذ البنية التحتية كرمز',
+                        'مراقبة أداء النظام',
+                        'ضمان أمن البنية التحتية',
+                        'التعاون مع فرق التطوير',
+                        'أتمتة المهام المتكررة'
+                    ],
+                    qualifications: [
+                        'درجة في علوم الكمبيوتر',
+                        '3-5 سنوات خبرة في DevOps',
+                        'خبرة قوية مع Kubernetes',
+                        'إتقان لغة برمجة نصية',
+                        'خبرة في IaC',
+                        'معرفة بالمنصات السحابية',
+                        'الشبكات والأمن'
+                    ],
+                    niceToHave: [
+                        'شهادات (CKA, AWS)',
+                        'أدوات المراقبة',
+                        'Service Mesh',
+                        'GitOps',
+                        'أدوات الأمن'
+                    ],
+                    benefits: [
+                        'راتب تنافسي',
+                        'تأمين صحي',
+                        'ساعات عمل مرنة',
+                        'ميزانية تدريب',
+                        'مكتب حديث',
+                        'فرص نمو وظيفي'
+                    ]
                 },
                 {
+                    slug: 'mlops-engineer',
                     title: 'مهندس MLOps',
-                    description: 'تصميم ونشر خطوط ML، إدارة دورة حياة النماذج وضمان بنية تحتية ML قابلة للتوسع.'
+                    description: 'تصميم ونشر خطوط ML، إدارة دورة حياة النماذج وضمان بنية تحتية ML قابلة للتوسع.',
+                    aboutRole: 'انضم إلى فريق ML لتصميم وصيانة خطوط ML في الإنتاج.',
+                    responsibilities: [
+                        'بناء خطوط ML',
+                        'تنفيذ ممارسات MLOps',
+                        'مراقبة أداء النماذج',
+                        'أتمتة إعادة التدريب',
+                        'إدارة بنية ML التحتية',
+                        'التعاون مع علماء البيانات'
+                    ],
+                    qualifications: [
+                        'درجة في علوم الكمبيوتر',
+                        '3+ سنوات خبرة MLOps',
+                        'دورة حياة ML',
+                        'أطر عمل ML',
+                        'Python',
+                        'Docker و Kubernetes',
+                        'منصات التقديم'
+                    ],
+                    niceToHave: [
+                        'خدمات ML السحابية',
+                        'مراقبة النماذج',
+                        'Feature stores',
+                        'تدريب موزع',
+                        'AutoML'
+                    ],
+                    benefits: [
+                        'راتب تنافسي',
+                        'أدوات ML حديثة',
+                        'مؤتمرات وتدريب',
+                        'عمل مرن',
+                        'فوائد صحية',
+                        'فريق تعاوني'
+                    ]
                 },
                 {
+                    slug: 'cloud-architect',
                     title: 'مهندس معماري سحابي',
-                    description: 'تصميم حلول السحابة الأصلية، تحسين البنية التحتية السحابية وقيادة مشاريع الترحيل السحابي.'
+                    description: 'تصميم حلول السحابة الأصلية، تحسين البنية التحتية السحابية وقيادة مشاريع الترحيل السحابي.',
+                    aboutRole: 'قُد تصميم وتنفيذ الحلول السحابية الأصلية.',
+                    responsibilities: [
+                        'تصميم حلول سحابية',
+                        'قيادة ترحيل السحابة',
+                        'تحسين التكاليف',
+                        'تنفيذ الأمن',
+                        'توثيق فني',
+                        'توجيه فني'
+                    ],
+                    qualifications: [
+                        'درجة في علوم الكمبيوتر',
+                        '5+ سنوات هندسة سحابية',
+                        'خبرة في منصة سحابية',
+                        'شبكات وأمن',
+                        'IaC',
+                        'تواصل ممتاز',
+                        'شهادات سحابية'
+                    ],
+                    niceToHave: [
+                        'خبرة متعددة السحابة',
+                        'TOGAF',
+                        'FinOps',
+                        'Serverless',
+                        'استشارات'
+                    ],
+                    benefits: [
+                        'راتب متميز',
+                        'ميزانية شهادات',
+                        'جدول مرن',
+                        'تأمين عائلي',
+                        'مكافآت',
+                        'قيادة'
+                    ]
                 },
                 {
+                    slug: 'site-reliability-engineer',
                     title: 'مهندس موثوقية الموقع',
-                    description: 'ضمان موثوقية النظام، تنفيذ حلول المراقبة وتحسين الأداء على نطاق واسع.'
+                    description: 'ضمان موثوقية النظام، تنفيذ حلول المراقبة وتحسين الأداء على نطاق واسع.',
+                    aboutRole: 'انضم لفريق SRE لضمان موثوقية وأداء أنظمتنا.',
+                    responsibilities: [
+                        'تصميم أنظمة مراقبة',
+                        'إدارة الحوادث',
+                        'تحليل ما بعد الحادث',
+                        'تحسين الأداء',
+                        'أتمتة العمليات',
+                        'تحديد SLIs و SLOs'
+                    ],
+                    qualifications: [
+                        'درجة في علوم الكمبيوتر',
+                        '3-5 سنوات SRE/DevOps',
+                        'برمجة (Python, Go)',
+                        'مراقبة',
+                        'Linux وشبكات',
+                        'إدارة حوادث'
+                    ],
+                    niceToHave: [
+                        'Chaos engineering',
+                        'اختبار الأداء',
+                        'قواعد بيانات',
+                        'تخطيط السعة',
+                        'Open source'
+                    ],
+                    benefits: [
+                        'تعويض تنافسي',
+                        'تعويض المناوبات',
+                        'ساعات مرنة',
+                        'تطوير مهني',
+                        'فوائد صحية',
+                        'توازن الحياة والعمل'
+                    ]
                 },
                 {
+                    slug: 'devops-consultant',
                     title: 'مستشار DevOps',
-                    description: 'توجيه العملاء خلال تحول DevOps، تنفيذ أفضل الممارسات وتقديم التدريب.'
+                    description: 'توجيه العملاء خلال تحول DevOps، تنفيذ أفضل الممارسات وتقديم التدريب.',
+                    aboutRole: 'ساعد العملاء في تحويل ممارسات DevOps الخاصة بهم.',
+                    responsibilities: [
+                        'تقييم نضج DevOps',
+                        'تصميم خارطة طريق',
+                        'تنفيذ CI/CD',
+                        'تقديم ورش عمل',
+                        'دعم التنفيذ',
+                        'توثيق'
+                    ],
+                    qualifications: [
+                        'درجة في علوم الكمبيوتر',
+                        '5+ سنوات DevOps',
+                        'مهارات استشارية',
+                        'عرض وتواصل',
+                        'أدوات CI/CD',
+                        'Agile و DevOps',
+                        'استقلالية'
+                    ],
+                    niceToHave: [
+                        'شهادات',
+                        'خبرة استشارية',
+                        'قطاعات متعددة',
+                        'خبرة تدريب',
+                        'تعدد لغات'
+                    ],
+                    benefits: [
+                        'راتب متميز ومكافآت',
+                        'فرص سفر',
+                        'ميزانية تدريب',
+                        'عمل مرن',
+                        'برامج رفاهية',
+                        'مسار وظيفي'
+                    ]
                 },
                 {
+                    slug: 'backend-engineer',
                     title: 'مهندس Backend',
-                    description: 'تطوير خدمات backend قابلة للتوسع، APIs ومicroservices باستخدام أطر عمل حديثة.'
+                    description: 'تطوير خدمات backend قابلة للتوسع، APIs ومicroservices باستخدام أطر عمل حديثة.',
+                    aboutRole: 'ابنِ خدمات backend قوية وقابلة للتوسع.',
+                    responsibilities: [
+                        'تصميم APIs',
+                        'كود نظيف',
+                        'تحسين الأداء',
+                        'مسا دقة',
+                        'تكامل',
+                        'مراجعة الكود'
+                    ],
+                    qualifications: [
+                        'درجة في علوم الكمبيوتر',
+                        '3+ سنوات backend',
+                        'لغة backend',
+                        'تصميم API',
+                        'قواعد بيانات',
+                        'Caching',
+                        'Auth'
+                    ],
+                    niceToHave: [
+                        'Microservices',
+                        'Message queues',
+                        'GraphQL',
+                        'DDD',
+                        'Open source'
+                    ],
+                    benefits: [
+                        'راتب تنافسي',
+                        'ساعات مرنة',
+                        'عن بُعد',
+                        'ميزانية تعلم',
+                        'تأمين صحي',
+                        'أنشطة فريق'
+                    ]
                 }
             ]
         }
@@ -736,3 +1620,6 @@ export function useLanguage() {
     }
     return context;
 }
+
+
+
