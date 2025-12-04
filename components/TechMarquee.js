@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const technologies = [
     { name: 'Docker', emoji: '🐳', logo: 'https://cdn.simpleicons.org/docker/2496ED' },
@@ -23,14 +24,12 @@ const TechItem = ({ tech }) => {
     return (
         <div className="flex items-center gap-3 bg-[#1e293b]/50 border border-white/5 px-6 py-3 rounded-xl backdrop-blur-sm hover:border-blue-500/50 transition-colors cursor-default min-w-[160px]">
             <div className="relative w-8 h-8 flex items-center justify-center">
-                {/* Emoji (Visible until logo loads) */}
                 <span
                     className={`text-2xl absolute transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}
                 >
                     {tech.emoji}
                 </span>
 
-                {/* Official Logo (Fades in) */}
                 <img
                     src={tech.logo}
                     alt={tech.name}
@@ -58,12 +57,14 @@ const MarqueeRow = ({ items, direction = 'left' }) => {
 };
 
 export default function TechMarquee() {
+    const { t } = useLanguage();
+
     return (
         <section className="py-20 bg-[#0a0e17]">
             <div className="container mx-auto px-4 text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Core Technologies</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('techMarquee.title')}</h2>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                    We leverage a modern stack of leading technologies to build robust and scalable solutions for our clients.
+                    {t('techMarquee.description')}
                 </p>
             </div>
 

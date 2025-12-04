@@ -1,6 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Hero() {
+    const { t } = useLanguage();
+
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
             {/* Background Elements */}
@@ -11,22 +16,22 @@ export default function Hero() {
 
             <div className="container mx-auto px-4 relative z-10 text-center">
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                    Future-Proof Your <br />
+                    {t('hero.title')} <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                        Infrastructure with Devaura
+                        {t('hero.titleHighlight')}
                     </span>
                 </h1>
 
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    We provide expert DevOps and MLOps solutions to streamline your development lifecycle and accelerate innovation.
+                    {t('hero.description')}
                 </p>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                     <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-lg shadow-blue-600/25">
-                        Schedule Consultation
+                        {t('hero.scheduleBtn')}
                     </Link>
                     <Link href="/about" className="px-8 py-4 rounded-full font-bold text-lg text-white border border-white/10 hover:bg-white/5 transition-all">
-                        Learn More
+                        {t('hero.learnBtn')}
                     </Link>
                 </div>
             </div>
