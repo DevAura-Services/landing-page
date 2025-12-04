@@ -30,6 +30,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-8">
                     <Link href="/" className="text-gray-300 hover:text-white transition-colors">{t('nav.home')}</Link>
                     <Link href="/about" className="text-gray-300 hover:text-white transition-colors">{t('nav.about')}</Link>
+                    <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">{t('nav.careers')}</Link>
                     <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">{t('nav.contact')}</Link>
 
                     {/* Language Switcher */}
@@ -83,6 +84,7 @@ export default function Navbar() {
                     <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
                         <Link href="/" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
                         <Link href="/about" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
+                        <Link href="/careers" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.careers')}</Link>
                         <Link href="/contact" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</Link>
 
                         {/* Mobile Language Switcher */}
@@ -95,8 +97,8 @@ export default function Navbar() {
                                         setIsMenuOpen(false);
                                     }}
                                     className={`px-3 py-1 rounded text-sm ${language === lang.code
-                                            ? 'bg-blue-600 text-white'
-                                            : 'bg-[#1e293b] text-gray-300'
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-[#1e293b] text-gray-300'
                                         }`}
                                 >
                                     {lang.code.toUpperCase()}

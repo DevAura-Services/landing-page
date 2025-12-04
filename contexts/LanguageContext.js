@@ -7,6 +7,7 @@ const translations = {
         nav: {
             home: 'Home',
             about: 'About Us',
+            careers: 'Careers',
             contact: 'Contact Us',
             schedule: 'Schedule Consultation'
         },
@@ -115,12 +116,66 @@ const translations = {
             placeholder: 'Type a message...',
             assistant: 'Devaura Assistant',
             online: 'Online'
+        },
+        careers: {
+            title: 'Join Our Team',
+            subtitle: 'Build your career with Devaura and shape the future of DevOps and MLOps',
+            whyJoin: 'Why Join Devaura?',
+            benefits: {
+                innovative: {
+                    title: 'Innovative Projects',
+                    desc: 'Work on cutting-edge DevOps and MLOps projects with leading global companies'
+                },
+                learning: {
+                    title: 'Continuous Learning',
+                    desc: 'Access to certifications, training programs, and the latest technologies'
+                },
+                exposure: {
+                    title: 'Global Exposure',
+                    desc: 'Collaborate with international clients and work on impactful solutions'
+                },
+                balance: {
+                    title: 'Work-Life Balance',
+                    desc: 'Flexible working arrangements and a supportive, inclusive culture'
+                }
+            },
+            openPositions: 'Open Positions',
+            applyBtn: 'Apply Now',
+            location: 'Location',
+            remote: 'Remote / Tunisia',
+            jobs: [
+                {
+                    title: 'DevOps Engineer',
+                    description: 'Build and maintain CI/CD pipelines, manage Kubernetes clusters, and implement infrastructure as code.'
+                },
+                {
+                    title: 'MLOps Engineer',
+                    description: 'Design and deploy ML pipelines, manage model lifecycle, and ensure scalable ML infrastructure.'
+                },
+                {
+                    title: 'Cloud Architect',
+                    description: 'Design cloud-native solutions, optimize cloud infrastructure, and lead cloud migration projects.'
+                },
+                {
+                    title: 'Site Reliability Engineer',
+                    description: 'Ensure system reliability, implement monitoring solutions, and optimize performance at scale.'
+                },
+                {
+                    title: 'DevOps Consultant',
+                    description: 'Guide clients through DevOps transformation, implement best practices, and deliver training.'
+                },
+                {
+                    title: 'Backend Engineer',
+                    description: 'Develop scalable backend services, APIs, and microservices using modern frameworks.'
+                }
+            ]
         }
     },
     fr: {
         nav: {
             home: 'Accueil',
             about: 'À Propos',
+            careers: 'Carrières',
             contact: 'Contact',
             schedule: 'Planifier une Consultation'
         },
@@ -229,12 +284,66 @@ const translations = {
             placeholder: 'Tapez un message...',
             assistant: 'Assistant Devaura',
             online: 'En ligne'
+        },
+        careers: {
+            title: 'Rejoignez Notre Équipe',
+            subtitle: 'Construisez votre carrière avec Devaura et façonnez l\'avenir du DevOps et MLOps',
+            whyJoin: 'Pourquoi Rejoindre Devaura?',
+            benefits: {
+                innovative: {
+                    title: 'Projets Innovants',
+                    desc: 'Travaillez sur des projets DevOps et MLOps de pointe avec des entreprises mondiales de premier plan'
+                },
+                learning: {
+                    title: 'Apprentissage Continu',
+                    desc: 'Accès aux certifications, programmes de formation et dernières technologies'
+                },
+                exposure: {
+                    title: 'Exposition Mondiale',
+                    desc: 'Collaborez avec des clients internationaux et travaillez sur des solutions impactantes'
+                },
+                balance: {
+                    title: 'Équilibre Vie-Travail',
+                    desc: 'Arrangements de travail flexibles et culture de soutien et inclusive'
+                }
+            },
+            openPositions: 'Postes Ouverts',
+            applyBtn: 'Postuler Maintenant',
+            location: 'Emplacement',
+            remote: 'À Distance / Tunisie',
+            jobs: [
+                {
+                    title: 'Ingénieur DevOps',
+                    description: 'Construire et maintenir des pipelines CI/CD, gérer des clusters Kubernetes et implémenter l\'infrastructure as code.'
+                },
+                {
+                    title: 'Ingénieur MLOps',
+                    description: 'Concevoir et déployer des pipelines ML, gérer le cycle de vie des modèles et assurer une infrastructure ML évolutive.'
+                },
+                {
+                    title: 'Architecte Cloud',
+                    description: 'Concevoir des solutions cloud-native, optimiser l\'infrastructure cloud et diriger des projets de migration cloud.'
+                },
+                {
+                    title: 'Ingénieur Site Reliability',
+                    description: 'Assurer la fiabilité du système, implémenter des solutions de surveillance et optimiser les performances à grande échelle.'
+                },
+                {
+                    title: 'Consultant DevOps',
+                    description: 'Guider les clients à travers la transformation DevOps, implémenter les meilleures pratiques et offrir des formations.'
+                },
+                {
+                    title: 'Ingénieur Backend',
+                    description: 'Développer des services backend évolutifs, des API et des microservices en utilisant des frameworks modernes.'
+                }
+            ]
         }
     },
     es: {
         nav: {
             home: 'Inicio',
             about: 'Nosotros',
+            careers: 'Carreras',
             contact: 'Contacto',
             schedule: 'Programar Consulta'
         },
@@ -343,12 +452,66 @@ const translations = {
             placeholder: 'Escribe un mensaje...',
             assistant: 'Asistente Devaura',
             online: 'En línea'
+        },
+        careers: {
+            title: 'Únete a Nuestro Equipo',
+            subtitle: 'Construye tu carrera con Devaura y da forma al futuro de DevOps y MLOps',
+            whyJoin: '¿Por Qué Unirte a Devaura?',
+            benefits: {
+                innovative: {
+                    title: 'Proyectos Innovadores',
+                    desc: 'Trabaja en proyectos DevOps y MLOps de vanguardia con empresas globales líderes'
+                },
+                learning: {
+                    title: 'Aprendizaje Continuo',
+                    desc: 'Acceso a certificaciones, programas de capacitación y las últimas tecnologías'
+                },
+                exposure: {
+                    title: 'Exposición Global',
+                    desc: 'Colabora con clientes internacionales y trabaja en soluciones de impacto'
+                },
+                balance: {
+                    title: 'Equilibrio Vida-Trabajo',
+                    desc: 'Arreglos de trabajo flexibles y cultura de apoyo e inclusiva'
+                }
+            },
+            openPositions: 'Posiciones Abiertas',
+            applyBtn: 'Aplicar Ahora',
+            location: 'Ubicación',
+            remote: 'Remoto / Túnez',
+            jobs: [
+                {
+                    title: 'Ingeniero DevOps',
+                    description: 'Construir y mantener pipelines CI/CD, gestionar clústeres Kubernetes e implementar infraestructura como código.'
+                },
+                {
+                    title: 'Ingeniero MLOps',
+                    description: 'Diseñar e implementar pipelines ML, gestionar el ciclo de vida de modelos y asegurar infraestructura ML escalable.'
+                },
+                {
+                    title: 'Arquitecto Cloud',
+                    description: 'Diseñar soluciones cloud-native, optimizar infraestructura cloud y liderar proyectos de migración cloud.'
+                },
+                {
+                    title: 'Ingeniero Site Reliability',
+                    description: 'Asegurar la confiabilidad del sistema, implementar soluciones de monitoreo y optimizar el rendimiento a escala.'
+                },
+                {
+                    title: 'Consultor DevOps',
+                    description: 'Guiar a los clientes a través de la transformación DevOps, implementar mejores prácticas y brindar capacitación.'
+                },
+                {
+                    title: 'Ingeniero Backend',
+                    description: 'Desarrollar servicios backend escalables, APIs y microservicios usando frameworks modernos.'
+                }
+            ]
         }
     },
     ar: {
         nav: {
             home: 'الرئيسية',
             about: 'من نحن',
+            careers: 'الوظائف',
             contact: 'اتصل بنا',
             schedule: 'حجز استشارة'
         },
@@ -457,6 +620,59 @@ const translations = {
             placeholder: 'اكتب رسالة...',
             assistant: 'مساعد ديفأورا',
             online: 'متصل'
+        },
+        careers: {
+            title: 'انضم إلى فريقنا',
+            subtitle: 'ابنِ مسيرتك المهنية مع ديفأورا وشكّل مستقبل DevOps و MLOps',
+            whyJoin: 'لماذا تنضم إلى ديفأورا؟',
+            benefits: {
+                innovative: {
+                    title: 'مشاريع مبتكرة',
+                    desc: 'اعمل على مشاريع DevOps و MLOps المتطورة مع شركات عالمية رائدة'
+                },
+                learning: {
+                    title: 'التعلم المستمر',
+                    desc: 'الوصول إلى الشهادات وبرامج التدريب وأحدث التقنيات'
+                },
+                exposure: {
+                    title: 'تعرض عالمي',
+                    desc: 'تعاون مع عملاء دوليين واعمل على حلول مؤثرة'
+                },
+                balance: {
+                    title: 'توازن العمل والحياة',
+                    desc: 'ترتيبات عمل مرنة وثقافة داعمة وشاملة'
+                }
+            },
+            openPositions: 'الوظائف المتاحة',
+            applyBtn: 'تقدم الآن',
+            location: 'الموقع',
+            remote: 'عن بُعد / تونس',
+            jobs: [
+                {
+                    title: 'مهندس DevOps',
+                    description: 'بناء وصيانة خطوط CI/CD، إدارة مجموعات Kubernetes وتنفيذ البنية التحتية كرمز.'
+                },
+                {
+                    title: 'مهندس MLOps',
+                    description: 'تصميم ونشر خطوط ML، إدارة دورة حياة النماذج وضمان بنية تحتية ML قابلة للتوسع.'
+                },
+                {
+                    title: 'مهندس معماري سحابي',
+                    description: 'تصميم حلول السحابة الأصلية، تحسين البنية التحتية السحابية وقيادة مشاريع الترحيل السحابي.'
+                },
+                {
+                    title: 'مهندس موثوقية الموقع',
+                    description: 'ضمان موثوقية النظام، تنفيذ حلول المراقبة وتحسين الأداء على نطاق واسع.'
+                },
+                {
+                    title: 'مستشار DevOps',
+                    description: 'توجيه العملاء خلال تحول DevOps، تنفيذ أفضل الممارسات وتقديم التدريب.'
+                },
+                {
+                    title: 'مهندس Backend',
+                    description: 'تطوير خدمات backend قابلة للتوسع، APIs ومicroservices باستخدام أطر عمل حديثة.'
+                }
+            ]
         }
     }
 };
