@@ -14,7 +14,16 @@ const languages = [
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
     const { language, changeLanguage, t } = useLanguage();
+
+    const serviceLinks = [
+        { name: 'DevOps Transformation', href: '/services/devops-transformation', icon: '🚀' },
+        { name: 'Cloud Architecture', href: '/services/cloud-architecture', icon: '☁️' },
+        { name: 'MLOps & AI', href: '/services/mlops', icon: '🧠' },
+        { name: 'Site Reliability Engineering', href: '/services/sre', icon: '⚡' },
+        { name: 'DevSecOps', href: '/services/devsecops', icon: '🛡️' }
+    ];
 
     const currentLang = languages.find(lang => lang.code === language);
 
@@ -30,7 +39,39 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-8">
                     <Link href="/" className="text-gray-300 hover:text-white transition-colors">{t('nav.home')}</Link>
                     <Link href="/about" className="text-gray-300 hover:text-white transition-colors">{t('nav.about')}</Link>
-                    <Link href="/services" className="text-gray-300 hover:text-white transition-colors">{t('nav.services')}</Link>
+
+                    {/* Services Dropdown */}
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                        <Link
+                            href="/services"
+                            className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                        >
+                            {t('nav.services')}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </Link>
+
+                        {isServicesOpen && (
+                            <div className="absolute top-full mt-2 left-0 bg-[#1e293b] border border-white/10 rounded-lg shadow-xl overflow-hidden min-w-[280px] z-50">
+                                {serviceLinks.map((service) => (
+                                    <Link
+                                        key={service.href}
+                                        href={service.href}
+                                        className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
+                                    >
+                                        <span className="text-xl">{service.icon}</span>
+                                        <span className="text-sm">{service.name}</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
                     <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">{t('nav.careers')}</Link>
                     <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">{t('nav.contact')}</Link>
 
@@ -85,7 +126,54 @@ export default function Navbar() {
                     <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
                         <Link href="/" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
                         <Link href="/about" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
-                        <Link href="/services" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.services')}</Link>
+
+                        {/* Mobile Services with Submenu */}
+                        <div>
+                            <button
+                                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                                className="text-gray-300 hover:text-white flex items-center gap-1 w-full"
+                            >
+                                {t('nav.services')}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
+                                >
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </button>
+
+                            {isServicesOpen && (
+                                <div className="mt-2 ml-4 flex flex-col gap-2">
+                                    <Link
+                                        href="/services"
+                                        className="text-gray-400 hover:text-white text-sm py-1"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        All Services
+                                    </Link>
+                                    {serviceLinks.map((service) => (
+                                        <Link
+                                            key={service.href}
+                                            href={service.href}
+                                            className="text-gray-400 hover:text-white text-sm flex items-center gap-2 py-1"
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            <span>{service.icon}</span>
+                                            <span>{service.name}</span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
                         <Link href="/careers" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.careers')}</Link>
                         <Link href="/contact" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</Link>
 
