@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Shield, Lock, Scale, Zap } from 'lucide-react';
 
 export default function DevSecOpsClient() {
     const { t } = useLanguage();
@@ -15,8 +16,8 @@ export default function DevSecOpsClient() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div className="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center text-3xl mb-6 text-red-500">
-                                🛡️
+                            <div className="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center text-red-500">
+                                <Shield size={40} />
                             </div>
                             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                                 {service.title}
@@ -56,21 +57,21 @@ export default function DevSecOpsClient() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">🔒</div>
+                            <div className="mb-4 text-red-500"><Lock size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Shift-Left Security</h3>
                             <p className="text-gray-400">
                                 Catch security issues early in the development cycle, not in production.
                             </p>
                         </div>
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">⚖️</div>
+                            <div className="mb-4 text-red-500"><Scale size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Compliance Automation</h3>
                             <p className="text-gray-400">
                                 Automate compliance checks and maintain audit trails effortlessly.
                             </p>
                         </div>
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">⚡</div>
+                            <div className="mb-4 text-red-500"><Zap size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Fast & Secure</h3>
                             <p className="text-gray-400">
                                 Don't sacrifice speed for security - achieve both with DevSecOps.

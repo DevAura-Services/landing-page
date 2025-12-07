@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Chatbot from '@/components/Chatbot'
 import CookieConsent from '@/components/CookieConsent'
+import Sparkles from '@/components/Sparkles'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
+                <Sparkles count={50} />
                 <LanguageProvider>
                     <Navbar />
                     {children}

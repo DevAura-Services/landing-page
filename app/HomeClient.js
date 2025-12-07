@@ -2,21 +2,33 @@
 
 import Hero from '@/components/Hero';
 import TechMarquee from '@/components/TechMarquee';
+import ServicesCarousel from '@/components/ServicesCarousel';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
-
-
+import { Users, DollarSign, MapPin, Rocket } from 'lucide-react';
 
 export default function Home() {
     const { t } = useLanguage();
 
+    const hubIcons = {
+        talent: Users,
+        cost: DollarSign,
+        location: MapPin,
+        ecosystem: Rocket
+    };
+
     return (
-        <main className="min-h-screen bg-[#0a0e17]">
+        <main className="min-h-screen bg-[#0a0e17] relative">
             <Hero />
+
+            <div className="relative z-10 bg-[#0a0e17]/80 backdrop-blur-sm">
+                <ServicesCarousel />
+            </div>
+
             <TechMarquee />
 
-            {/* Services / Hub Section */}
-            <section className="py-20 bg-[#05080f]">
+            {/* Hub / Benefits Section */}
+            <section className="py-20 bg-[#05080f] relative z-10">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('services.title')}</h2>
@@ -26,30 +38,29 @@ export default function Home() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { key: 'talent', icon: '👥' },
-                            { key: 'cost', icon: '💰' },
-                            { key: 'location', icon: '🌍' },
-                            { key: 'ecosystem', icon: '🚀' },
-                        ].map((item, idx) => (
-                            <div key={idx} className="bg-[#1e293b]/30 border border-white/5 p-8 rounded-2xl hover:bg-[#1e293b]/50 transition-colors">
-                                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center text-2xl mb-6 text-blue-500">
-                                    {item.icon}
+                        {['talent', 'cost', 'location', 'ecosystem'].map((key) => {
+                            const Icon = hubIcons[key];
+                            return (
+                                <div key={key} className="bg-[#1e293b]/30 border border-white/5 p-8 rounded-2xl hover:bg-[#1e293b]/50 transition-colors group">
+                                    <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 text-blue-500 group-hover:text-blue-400 transition-colors">
+                                        <Icon size={24} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-3">{t(`services.${key}.title`)}</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed">
+                                        {t(`services.${key}.desc`)}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3">{t(`services.${item.key}.title`)}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    {t(`services.${item.key}.desc`)}
-                                </p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="py-20">
+            <section className="py-20 relative z-10">
                 <div className="container mx-auto px-4">
                     <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]" />
                         <div className="relative z-10">
                             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
                                 {t('cta.title')}

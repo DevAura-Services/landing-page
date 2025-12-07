@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Rocket, Zap, Target, DollarSign } from 'lucide-react';
 
 export default function DevOpsClient() {
     const { t } = useLanguage();
@@ -15,8 +16,8 @@ export default function DevOpsClient() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center text-3xl mb-6 text-blue-500">
-                                🚀
+                            <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-500">
+                                <Rocket size={40} />
                             </div>
                             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                                 {service.title}
@@ -56,21 +57,21 @@ export default function DevOpsClient() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">⚡</div>
+                            <div className="mb-4 text-blue-500"><Zap size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Faster Delivery</h3>
                             <p className="text-gray-400">
                                 Deploy code 10x faster with automated CI/CD pipelines and streamlined workflows.
                             </p>
                         </div>
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">🎯</div>
+                            <div className="mb-4 text-blue-500"><Target size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Higher Quality</h3>
                             <p className="text-gray-400">
                                 Catch bugs early with automated testing and continuous quality checks.
                             </p>
                         </div>
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">💰</div>
+                            <div className="mb-4 text-blue-500"><DollarSign size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Cost Efficiency</h3>
                             <p className="text-gray-400">
                                 Reduce operational costs through automation and optimized resource usage.

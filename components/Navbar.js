@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Rocket, Cloud, Brain, Activity, Shield } from 'lucide-react';
 
 const languages = [
     { code: 'en', name: 'English' },
@@ -18,11 +19,11 @@ export default function Navbar() {
     const { language, changeLanguage, t } = useLanguage();
 
     const serviceLinks = [
-        { name: 'DevOps Transformation', href: '/services/devops-transformation', icon: '🚀' },
-        { name: 'Cloud Architecture', href: '/services/cloud-architecture', icon: '☁️' },
-        { name: 'MLOps & AI', href: '/services/mlops', icon: '🧠' },
-        { name: 'Site Reliability Engineering', href: '/services/sre', icon: '⚡' },
-        { name: 'DevSecOps', href: '/services/devsecops', icon: '🛡️' }
+        { name: 'DevOps Transformation', href: '/services/devops-transformation', icon: Rocket },
+        { name: 'Cloud Architecture', href: '/services/cloud-architecture', icon: Cloud },
+        { name: 'MLOps & AI', href: '/services/mlops', icon: Brain },
+        { name: 'Site Reliability Engineering', href: '/services/sre', icon: Activity },
+        { name: 'DevSecOps', href: '/services/devsecops', icon: Shield }
     ];
 
     const currentLang = languages.find(lang => lang.code === language);
@@ -64,7 +65,9 @@ export default function Navbar() {
                                         href={service.href}
                                         className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                                     >
-                                        <span className="text-xl">{service.icon}</span>
+                                        <span className="text-xl">
+                                            <service.icon size={20} />
+                                        </span>
                                         <span className="text-sm">{service.name}</span>
                                     </Link>
                                 ))}
@@ -166,7 +169,9 @@ export default function Navbar() {
                                             className="text-gray-400 hover:text-white text-sm flex items-center gap-2 py-1"
                                             onClick={() => setIsMenuOpen(false)}
                                         >
-                                            <span>{service.icon}</span>
+                                            <span>
+                                                <service.icon size={16} />
+                                            </span>
                                             <span>{service.name}</span>
                                         </Link>
                                     ))}

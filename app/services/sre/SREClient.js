@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Activity, CheckCircle, TrendingUp, Search } from 'lucide-react';
 
 export default function SREClient() {
     const { t } = useLanguage();
@@ -15,8 +16,8 @@ export default function SREClient() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center text-3xl mb-6 text-green-500">
-                                ⚡
+                            <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center text-green-500">
+                                <Activity size={40} />
                             </div>
                             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                                 {service.title}
@@ -56,21 +57,21 @@ export default function SREClient() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">✅</div>
+                            <div className="mb-4 text-green-500"><CheckCircle size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">99.9% Uptime</h3>
                             <p className="text-gray-400">
                                 Ensure maximum availability with proactive monitoring and incident management.
                             </p>
                         </div>
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">📈</div>
+                            <div className="mb-4 text-green-500"><TrendingUp size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Performance Optimization</h3>
                             <p className="text-gray-400">
                                 Continuously improve system performance through data-driven insights.
                             </p>
                         </div>
                         <div className="bg-[#1e293b]/20 border border-white/5 rounded-2xl p-8">
-                            <div className="text-4xl mb-4">🔍</div>
+                            <div className="mb-4 text-green-500"><Search size={40} /></div>
                             <h3 className="text-xl font-bold text-white mb-3">Full Observability</h3>
                             <p className="text-gray-400">
                                 Complete visibility into your systems with comprehensive monitoring.

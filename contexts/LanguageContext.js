@@ -26,7 +26,23 @@ const translations = {
         services: {
             title: 'Our Expertise',
             subtitle: 'Comprehensive DevOps & MLOps Solutions',
-            description: 'We help businesses modernize their infrastructure, automate workflows, and accelerate innovation through our core service pillars.',
+            description: 'We provide expert DevOps and MLOps solutions to streamline your development lifecycle and accelerate innovation.',
+            talent: {
+                title: 'Top-Tier Talent',
+                desc: 'Access a growing pool of highly skilled, multilingual engineers.'
+            },
+            cost: {
+                title: 'Cost-Effectiveness',
+                desc: 'Benefit from competitive operational costs without compromising quality.'
+            },
+            location: {
+                title: 'Strategic Location',
+                desc: 'Ideal time zone alignment for seamless collaboration.'
+            },
+            ecosystem: {
+                title: 'Thriving Ecosystem',
+                desc: 'A supportive environment with government incentives and innovation hubs.'
+            },
             pillars: {
                 devops: {
                     title: 'DevOps Transformation',
@@ -86,7 +102,7 @@ const translations = {
             button: 'Start a Project with Our Talent'
         },
         footer: {
-            description: 'Empowering businesses with cutting-edge DevOps and MLOps solutions.',
+            description: 'DevAura specializes in DevOps Transformation, Cloud Architecture, and MLOps solutions to streamline your development lifecycle.',
             company: 'Company',
             aboutUs: 'About Us',
             services: 'Services',
@@ -462,6 +478,38 @@ const translations = {
             ecosystem: {
                 title: 'Écosystème Florissant',
                 desc: 'Un environnement favorable avec des incitations gouvernementales et des pôles d\'innovation.'
+            },
+            pillars: {
+                devops: {
+                    title: 'Transformation DevOps',
+                    tagline: 'Rationalisez votre pipeline de livraison',
+                    desc: 'Accélérez votre livraison de logiciels avec des pipelines CI/CD robustes, de l\'Infrastructure as Code et de l\'orchestration de conteneurs.',
+                    features: ['Automatisation Pipeline CI/CD', 'Infrastructure as Code (IaC)', 'Kubernetes & Docker', 'Implémentation GitOps']
+                },
+                cloud: {
+                    title: 'Architecture Cloud',
+                    tagline: 'Évolutif, sécurisé et rentable',
+                    desc: 'Concevez et migrez vers des architectures cloud-native qui évoluent avec votre entreprise tout en optimisant les coûts.',
+                    features: ['Migration Cloud (AWS/Azure/GCP)', 'Architecture Serverless', 'FinOps & Optimisation des Coûts', 'Stratégie Multi-Cloud']
+                },
+                mlops: {
+                    title: 'MLOps & IA',
+                    tagline: 'Du modèle à la production, plus vite',
+                    desc: 'Comblez le fossé entre la science des données et les opérations avec des pipelines ML automatisés et un serving de modèles évolutif.',
+                    features: ['Pipelines ML Automatisés', 'Serving & Monitoring de Modèles', 'Feature Stores', 'Gestion de Clusters GPU']
+                },
+                sre: {
+                    title: 'Site Reliability Engineering',
+                    tagline: 'Disponibilité et performance garanties',
+                    desc: 'Assurez-vous que vos systèmes sont fiables, évolutifs et observables avec nos pratiques SRE.',
+                    features: ['Monitoring 24/7 & Alertes', 'Réponse aux Incidents', 'Définition SLO/SLI', 'Optimisation Performance']
+                },
+                security: {
+                    title: 'DevSecOps',
+                    tagline: 'La sécurité à la vitesse du code',
+                    desc: 'Intégrez la sécurité à chaque étape de votre cycle de développement sans ralentir la livraison.',
+                    features: ['Scan de Sécurité Automatisé', 'Automatisation de la Conformité', 'Gestion des Secrets', 'Évaluation des Vulnérabilités']
+                }
             }
         },
         cta: {
@@ -840,6 +888,38 @@ const translations = {
             ecosystem: {
                 title: 'Ecosistema Próspero',
                 desc: 'Un entorno de apoyo con incentivos gubernamentales y centros de innovación.'
+            },
+            pillars: {
+                devops: {
+                    title: 'Transformación DevOps',
+                    tagline: 'Optimice su pipeline de entrega',
+                    desc: 'Acelere su entrega de software con pipelines CI/CD robustos, Infraestructura como Código y orquestación de contenedores.',
+                    features: ['Automatización Pipeline CI/CD', 'Infraestructura como Código (IaC)', 'Kubernetes & Docker', 'Implementación GitOps']
+                },
+                cloud: {
+                    title: 'Arquitectura Cloud',
+                    tagline: 'Escalable, seguro y rentable',
+                    desc: 'Diseñe y migre a arquitecturas cloud-native que escalen con su negocio mientras optimiza costos.',
+                    features: ['Migración Cloud (AWS/Azure/GCP)', 'Arquitectura Serverless', 'FinOps & Optimización de Costos', 'Estrategia Multi-Cloud']
+                },
+                mlops: {
+                    title: 'MLOps & IA',
+                    tagline: 'Del modelo a producción, más rápido',
+                    desc: 'Cierre la brecha entre ciencia de datos y operaciones con pipelines ML automatizados y serving de modelos escalable.',
+                    features: ['Pipelines ML Automatizados', 'Serving y Monitoreo de Modelos', 'Feature Stores', 'Gestión de Clústeres GPU']
+                },
+                sre: {
+                    title: 'Site Reliability Engineering',
+                    tagline: 'Tiempo de actividad y rendimiento garantizados',
+                    desc: 'Asegure que sus sistemas sean confiables, escalables y observables con nuestras prácticas SRE.',
+                    features: ['Monitoreo 24/7 y Alertas', 'Respuesta a Incidentes', 'Definición SLO/SLI', 'Optimización de Rendimiento']
+                },
+                security: {
+                    title: 'DevSecOps',
+                    tagline: 'Seguridad a la velocidad del código',
+                    desc: 'Integre la seguridad en cada etapa de su ciclo de desarrollo sin ralentizar la entrega.',
+                    features: ['Escaneo de Seguridad Automatizado', 'Automatización de Cumplimiento', 'Gestión de Secretos', 'Evaluación de Vulnerabilidades']
+                }
             }
         },
         cta: {
@@ -1218,6 +1298,38 @@ const translations = {
             ecosystem: {
                 title: 'نظام بيئي مزدهر',
                 desc: 'بيئة داعمة مع حوافز حكومية ومراكز ابتكار.'
+            },
+            pillars: {
+                devops: {
+                    title: 'تحول DevOps',
+                    tagline: 'بسط خط أنابيب التسليم الخاص بك',
+                    desc: 'سرع تسليم برمجياتك مع خطوط CI/CD قوية، والبنية التحتية كرمز، وتنسيق الحاويات.',
+                    features: ['أتمتة خط أنابيب CI/CD', 'البنية التحتية كرمز (IaC)', 'Kubernetes & Docker', 'تطبيق GitOps']
+                },
+                cloud: {
+                    title: 'الهندسة المعمارية السحابية',
+                    tagline: 'قابلة للتوسع، آمنة، وفعالة من حيث التكلفة',
+                    desc: 'صمم وانتقل إلى معماريات سحابية أصلية تتوسع مع عملك مع تحسين التكاليف.',
+                    features: ['الترحيل السحابي (AWS/Azure/GCP)', 'معمارية Serverless', 'FinOps وتحسين التكاليف', 'استراتيجية السحابة المتعددة']
+                },
+                mlops: {
+                    title: 'MLOps والذكاء الاصطناعي',
+                    tagline: 'من النموذج إلى الإنتاج، أسرع',
+                    desc: 'سد الفجوة بين علم البيانات والعمليات مع خطوط ML المؤتمتة وتقديم النماذج القابل للتوسع.',
+                    features: ['خطوط ML المؤتمتة', 'تقديم ومراقبة النماذج', 'متاجر الميزات', 'إدارة مجموعات GPU']
+                },
+                sre: {
+                    title: 'هندسة موثوقية الموقع',
+                    tagline: 'وقت تشغيل وأداء مضمونان',
+                    desc: 'تأكد من أن أنظمتك موثوقة وقابلة للتوسع وقابلة للمراقبة مع ممارسات SRE لدينا.',
+                    features: ['مراقبة وتنبيهات 24/7', 'الاستجابة للحوادث', 'تعريف SLO/SLI', 'تحسين الأداء']
+                },
+                security: {
+                    title: 'DevSecOps',
+                    tagline: 'الأمان بسرعة الكود',
+                    desc: 'ادمج الأمان في كل مرحلة من دورة التطوير الخاصة بك دون إبطاء التسليم.',
+                    features: ['فحص الأمان الآلي', 'أتمتة الامتثال', 'إدارة الأسرار', 'تقييم الثغرات الأمنية']
+                }
             }
         },
         cta: {
