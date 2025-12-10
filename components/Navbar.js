@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Rocket, Cloud, Brain, Activity, Shield } from 'lucide-react';
 
@@ -16,7 +16,16 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const { language, changeLanguage, t } = useLanguage();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const serviceLinks = [
         { name: 'DevOps Transformation', href: '/services/devops-transformation', icon: Rocket },
@@ -29,8 +38,14 @@ export default function Navbar() {
     const currentLang = languages.find(lang => lang.code === language);
 
     return (
-        <nav className="fixed w-full z-50 bg-[#0a0e17]/80 backdrop-blur-md border-b border-white/10">
-            <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <nav
+            className={`fixed z-50 transition-all duration-300 ease-in-out inset-x-0 mx-auto ${isScrolled
+                    ? 'top-4 w-[95%] max-w-7xl rounded-full bg-[#0a0e17]/90 backdrop-blur-md border border-white/10 shadow-2xl'
+                    : 'top-0 w-full bg-[#0a0e17]/80 backdrop-blur-md border-b border-white/10'
+                }`}
+        >
+            <div className={`px-4 md:px-8 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'h-16' : 'container mx-auto h-20'
+                }`}>
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
                     <img src="/logo-with-text.png" alt="Devaura Logo" className="h-10" />
