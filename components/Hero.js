@@ -2,16 +2,51 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Hero() {
     const { t } = useLanguage();
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const containerRef = useRef(null);
+
+    const handleMouseMove = (event) => {
+        if (containerRef.current) {
+            const rect = containerRef.current.getBoundingClientRect();
+            setMousePosition({
+                x: event.clientX - rect.left,
+                y: event.clientY - rect.top,
+            });
+        }
+    };
 
     return (
-        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-            {/* Background Elements */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl opacity-30 pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+        <section
+            ref={containerRef}
+            onMouseMove={handleMouseMove}
+            className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#0a0e17]"
+        >
+            {/* Grid & Glow Background */}
+            <div className="absolute inset-0 pointer-events-none">
+                {/* Grid Pattern */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage: `
+                            linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px)
+                        `,
+                        backgroundSize: '40px 40px',
+                        maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
+                    }}
+                />
+
+                {/* Mouse Follow Glow */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(37, 99, 235, 0.1), transparent 40%)`
+                    }}
+                />
             </div>
 
             <div className="container mx-auto px-4 relative z-10 text-center">
