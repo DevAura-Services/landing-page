@@ -40,8 +40,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed z-50 transition-all duration-300 ease-in-out inset-x-0 mx-auto ${isScrolled
-                    ? 'top-4 w-[95%] max-w-7xl rounded-full bg-[#0a0e17]/90 backdrop-blur-md border border-white/10 shadow-2xl'
-                    : 'top-0 w-full bg-[#0a0e17]/80 backdrop-blur-md border-b border-white/10'
+                ? 'top-4 w-[95%] max-w-7xl rounded-full bg-[#0a0e17]/90 backdrop-blur-md border border-white/10 shadow-2xl'
+                : 'top-0 w-full bg-[#0a0e17]/80 backdrop-blur-md border-b border-white/10'
                 }`}
         >
             <div className={`px-4 md:px-8 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'h-16' : 'container mx-auto h-20'

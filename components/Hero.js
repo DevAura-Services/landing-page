@@ -50,12 +50,33 @@ export default function Hero() {
             </div>
 
             <div className="container mx-auto px-4 relative z-10 text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                    {t('hero.title')} <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                        {t('hero.titleHighlight')}
-                    </span>
-                </h1>
+                <div className="relative inline-block mb-6">
+                    <h1
+                        className="text-5xl md:text-7xl font-bold tracking-tight"
+                        style={{
+                            background: 'linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 30%, rgba(59,130,246,1) 50%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0.4) 100%)',
+                            backgroundSize: '200% auto',
+                            WebkitBackgroundClip: 'text',
+                            backgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            animation: 'textGlow 4s linear infinite'
+                        }}
+                    >
+                        {t('hero.title')} <br />
+                        <span
+                            style={{
+                                background: 'linear-gradient(90deg, rgba(139,92,246,0.6) 0%, rgba(139,92,246,0.6) 30%, rgba(168,85,247,1) 50%, rgba(139,92,246,0.6) 70%, rgba(139,92,246,0.6) 100%)',
+                                backgroundSize: '200% auto',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                animation: 'textGlow 4s linear infinite'
+                            }}
+                        >
+                            {t('hero.titleHighlight')}
+                        </span>
+                    </h1>
+                </div>
 
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                     {t('hero.description')}

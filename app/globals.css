@@ -61,6 +61,16 @@ a {
   animation: scroll-right 30s linear infinite;
 }
 
+@keyframes textGlow {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
