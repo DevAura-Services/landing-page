@@ -24,7 +24,7 @@ const translations = {
             description: 'We leverage a modern stack of leading technologies to build robust and scalable solutions for our clients.'
         },
         services: {
-            title: 'Our Expertise',
+            title: 'Our Services',
             subtitle: 'Comprehensive DevOps & MLOps Solutions',
             description: 'We provide expert DevOps and MLOps solutions to streamline your development lifecycle and accelerate innovation.',
             talent: {
@@ -461,7 +461,7 @@ const translations = {
             description: 'Nous utilisons une pile moderne de technologies de pointe pour créer des solutions robustes et évolutives pour nos clients.'
         },
         services: {
-            title: 'Un Centre d\'Avantages Inégalés',
+            title: 'Nos Services',
             description: 'D\'un vivier de talents important à un écosystème technologique florissant, la Tunisie offre une combinaison unique d\'avantages pour les entreprises technologiques mondiales.',
             talent: {
                 title: 'Talents de Premier Plan',
