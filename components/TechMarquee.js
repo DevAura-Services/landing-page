@@ -8,7 +8,7 @@ const technologies = [
     { name: 'Jenkins', logo: 'https://cdn.simpleicons.org/jenkins/FFFFFF' },
     { name: 'Terraform', logo: 'https://cdn.simpleicons.org/terraform/FFFFFF' },
     { name: 'Ansible', logo: 'https://cdn.simpleicons.org/ansible/FFFFFF' },
-    { name: 'AWS', logo: 'https://cdn.simpleicons.org/amazonwebservices/FFFFFF' },
+    { name: 'AWS', logo: 'https://img.icons8.com/material-outlined/96/FFFFFF/amazon-web-services.png' },
     { name: 'Google Cloud', logo: 'https://cdn.simpleicons.org/googlecloud/FFFFFF' },
     { name: 'Prometheus', logo: 'https://cdn.simpleicons.org/prometheus/FFFFFF' },
     { name: 'Grafana', logo: 'https://cdn.simpleicons.org/grafana/FFFFFF' },
