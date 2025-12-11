@@ -1,6 +1,7 @@
 'use client';
 
 import Hero from '@/components/Hero';
+import StorySection from '@/components/StorySection';
 import TechMarquee from '@/components/TechMarquee';
 import ServicesCarousel from '@/components/ServicesCarousel';
 import Link from 'next/link';
@@ -20,6 +21,8 @@ export default function Home() {
     return (
         <main className="min-h-screen bg-[#0a0e17] relative">
             <Hero />
+
+            <StorySection />
 
             <div className="relative z-10 bg-[#0a0e17]/80 backdrop-blur-sm">
                 <ServicesCarousel />

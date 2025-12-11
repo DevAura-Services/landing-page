@@ -19,6 +19,30 @@ const translations = {
             scheduleBtn: 'Schedule Consultation',
             learnBtn: 'Learn More'
         },
+        story: {
+            title: 'Your Infrastructure Challenge',
+            subtitle: 'From Complexity to Confidence',
+            stages: {
+                challenge: {
+                    number: '01',
+                    title: 'Modern Systems are Hard',
+                    description: 'Your infrastructure is complex and critical. Downtime costs money. Security breaches cost trust. Scaling is expensive. Manual deployments are error-prone and slow.',
+                    points: ['Critical dependencies everywhere', 'Scaling becomes exponential in cost', 'Manual processes breed errors', 'Security requires constant vigilance']
+                },
+                guide: {
+                    number: '02',
+                    title: 'Expert Guidance Every Step',
+                    description: 'You don\'t have to figure it out alone. Our experts assess your current state, design a transformation roadmap, and guide you through implementation.',
+                    points: ['Expert consultation and assessment', 'Customized transformation roadmap', 'Hands-on implementation support', 'Best practices and methodologies']
+                },
+                transformation: {
+                    number: '03',
+                    title: 'Robust, Automated Systems',
+                    description: 'The result? Automated deployments. Fewer manual tasks. Systems that scale gracefully. Infrastructure that\'s secure by default. Teams that sleep peacefully.',
+                    points: ['Eliminate manual time waste', 'Automated deployments and scaling', 'Security and compliance by design', 'Reliable systems you can trust']
+                }
+            }
+        },
         techMarquee: {
             title: 'Core Technologies',
             description: 'We leverage a modern stack of leading technologies to build robust and scalable solutions for our clients.'
@@ -456,6 +480,30 @@ const translations = {
             scheduleBtn: 'Planifier une Consultation',
             learnBtn: 'En Savoir Plus'
         },
+        story: {
+            title: 'Votre Défi Infrastructurel',
+            subtitle: 'De la Complexité à la Confiance',
+            stages: {
+                challenge: {
+                    number: '01',
+                    title: 'Les Systèmes Modernes Sont Complexes',
+                    description: 'Votre infrastructure est complexe et critique. Les arrêts coûtent de l\'argent. Les violations de sécurité coûtent la confiance. La mise à l\'échelle est coûteuse. Les déploiements manuels sont sujets aux erreurs et lents.',
+                    points: ['Dépendances critiques partout', 'La mise à l\'échelle devient exponentiellement coûteuse', 'Les processus manuels génèrent des erreurs', 'La sécurité nécessite une vigilance constante']
+                },
+                guide: {
+                    number: '02',
+                    title: 'Orientation d\'Experts à Chaque Étape',
+                    description: 'Vous n\'avez pas à le faire seul. Nos experts évaluent votre état actuel, conçoivent une feuille de route de transformation et vous guident dans la mise en œuvre.',
+                    points: ['Conseil et évaluation d\'experts', 'Feuille de route de transformation personnalisée', 'Support à la mise en œuvre pratique', 'Meilleures pratiques et méthodologies']
+                },
+                transformation: {
+                    number: '03',
+                    title: 'Systèmes Robustes et Automatisés',
+                    description: 'Le résultat? Déploiements automatisés. Moins de tâches manuelles. Systèmes qui se dimensionnent gracieusement. Infrastructure sécurisée par défaut. Des équipes qui dorment paisiblement.',
+                    points: ['Éliminer les pertes de temps manuelles', 'Déploiements et mise à l\'échelle automatisés', 'Sécurité et conformité par conception', 'Systèmes fiables sur lesquels vous pouvez compter']
+                }
+            }
+        },
         techMarquee: {
             title: 'Technologies Principales',
             description: 'Nous utilisons une pile moderne de technologies de pointe pour créer des solutions robustes et évolutives pour nos clients.'
@@ -866,6 +914,30 @@ const translations = {
             scheduleBtn: 'Programar Consulta',
             learnBtn: 'Saber Más'
         },
+        story: {
+            title: 'Su Desafío Infraestructural',
+            subtitle: 'De la Complejidad a la Confianza',
+            stages: {
+                challenge: {
+                    number: '01',
+                    title: 'Los Sistemas Modernos Son Complejos',
+                    description: 'Su infraestructura es compleja y crítica. El tiempo de inactividad cuesta dinero. Las brechas de seguridad cuestan confianza. El escalado es costoso. Los despliegues manuales son propensos a errores y lentos.',
+                    points: ['Dependencias críticas en todas partes', 'El escalado se vuelve exponencialmente costoso', 'Los procesos manuales generan errores', 'La seguridad requiere vigilancia constante']
+                },
+                guide: {
+                    number: '02',
+                    title: 'Orientación Experta en Cada Paso',
+                    description: 'No tiene que hacerlo solo. Nuestros expertos evalúan su estado actual, diseñan una hoja de ruta de transformación y lo guían en la implementación.',
+                    points: ['Consultoría y evaluación de expertos', 'Hoja de ruta de transformación personalizada', 'Soporte práctico en la implementación', 'Mejores prácticas y metodologías']
+                },
+                transformation: {
+                    number: '03',
+                    title: 'Sistemas Robustos y Automatizados',
+                    description: 'El resultado? Despliegues automatizados. Menos tareas manuales. Sistemas que se escalan elegantemente. Infraestructura segura por defecto. Equipos que duermen tranquilamente.',
+                    points: ['Eliminar la pérdida de tiempo manual', 'Despliegues y escalado automatizados', 'Seguridad y cumplimiento por diseño', 'Sistemas confiables en los que puede contar']
+                }
+            }
+        },
         techMarquee: {
             title: 'Tecnologías Principales',
             description: 'Aprovechamos un conjunto moderno de tecnologías líderes para construir soluciones robustas y escalables para nuestros clientes.'
@@ -1275,6 +1347,30 @@ const translations = {
             description: 'نقدم حلول DevOps و MLOps احترافية لتبسيط دورة التطوير وتسريع الابتكار.',
             scheduleBtn: 'حجز استشارة',
             learnBtn: 'اعرف المزيد'
+        },
+        story: {
+            title: 'تحديك البنيوي',
+            subtitle: 'من التعقيد إلى الثقة',
+            stages: {
+                challenge: {
+                    number: '01',
+                    title: 'الأنظمة الحديثة معقدة',
+                    description: 'بنيتك التحتية معقدة وحرجة. التوقف يكلف المال. انتهاكات الأمان تكلف الثقة. التوسع مكلف. النشر اليدوي عرضة للأخطاء وبطيء.',
+                    points: ['التبعيات الحرجة في كل مكان', 'التوسع يصبح مكلفا بشكل كبير', 'العمليات اليدوية تولد أخطاء', 'الأمان يتطلب حذرا مستمرا']
+                },
+                guide: {
+                    number: '02',
+                    title: 'التوجيه الخبير في كل خطوة',
+                    description: 'لا تضطر للقيام بذلك وحدك. يقيّم خبراؤنا حالتك الحالية ويصممون خارطة طريق التحول ويرشدونك في التنفيذ.',
+                    points: ['استشارة وتقييم الخبراء', 'خارطة طريق تحول مخصصة', 'دعم عملي للتنفيذ', 'أفضل الممارسات والمنهجيات']
+                },
+                transformation: {
+                    number: '03',
+                    title: 'أنظمة قوية وآلية',
+                    description: 'النتيجة؟ نشر آلي. مهام يدوية أقل. أنظمة تتوسع بسلاسة. بنية تحتية آمنة افتراضيا. فرق تنام بسلام.',
+                    points: ['التخلص من هدر الوقت اليدوي', 'النشر والتوسع الآلي', 'الأمان والامتثال بالتصميم', 'أنظمة موثوقة يمكنك الاعتماد عليها']
+                }
+            }
         },
         techMarquee: {
             title: 'التقنيات الأساسية',
