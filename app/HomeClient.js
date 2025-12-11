@@ -1,10 +1,12 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Hero from '@/components/Hero';
-import StorySection from '@/components/StorySection';
-import TechMarquee from '@/components/TechMarquee';
-import ServicesCarousel from '@/components/ServicesCarousel';
 import Link from 'next/link';
+
+const StorySection = dynamic(() => import('@/components/StorySection'));
+const TechMarquee = dynamic(() => import('@/components/TechMarquee'));
+const ServicesCarousel = dynamic(() => import('@/components/ServicesCarousel'));
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Users, DollarSign, MapPin, Rocket } from 'lucide-react';
 

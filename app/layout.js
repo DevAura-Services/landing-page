@@ -4,7 +4,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Chatbot from '@/components/Chatbot'
 import CookieConsent from '@/components/CookieConsent'
-import MouseGlow from '@/components/MouseGlow'
+import dynamic from 'next/dynamic';
+
+const MouseGlow = dynamic(() => import('@/components/MouseGlow'), { ssr: false });
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({ subsets: ['latin'] })
