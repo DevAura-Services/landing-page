@@ -181,7 +181,36 @@ const translations = {
                 'Dedicated MLOps Solutions',
                 '24/7 Support and Monitoring',
                 'Cost-Effective Scaling Strategies'
-            ]
+            ],
+            stats: [
+                { label: 'Projects Delivered', value: '50+' },
+                { label: 'Uptime Guaranteed', value: '99.99%' },
+                { label: 'Team Members', value: '20+' }
+            ],
+            process: {
+                title: 'How We Work',
+                steps: [
+                    { title: 'Discovery', desc: 'We analyze your current infrastructure and business goals.' },
+                    { title: 'Architecture', desc: 'We design a scalable, secure, and cost-effective solution.' },
+                    { title: 'Implementation', desc: 'We build and potentialy migrate your systems with zero downtime.' },
+                    { title: 'Optimization', desc: 'We continuously monitor and improve your stack.' }
+                ]
+            },
+            team: {
+                title: 'Our Leadership',
+                members: [
+                    {
+                        name: 'Kmar Turki',
+                        role: 'Co-Founder',
+                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/'
+                    },
+                    {
+                        name: 'Mahdi Ben Slima',
+                        role: 'Co-Founder',
+                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/'
+                    }
+                ]
+            }
         },
         cookie: {
             title: 'We use cookies',
@@ -621,7 +650,36 @@ const translations = {
                 'Solutions MLOps Dédiées',
                 'Support et Surveillance 24/7',
                 'Stratégies d\'Évolution Rentables'
-            ]
+            ],
+            stats: [
+                { label: 'Projets Livrés', value: '50+' },
+                { label: 'Disponibilité Garantie', value: '99.99%' },
+                { label: 'Membres de l\'Équipe', value: '20+' }
+            ],
+            process: {
+                title: 'Notre Processus',
+                steps: [
+                    { title: 'Découverte', desc: 'Nous analysons votre infrastructure actuelle et vos objectifs.' },
+                    { title: 'Architecture', desc: 'Nous concevons une solution évolutive, sécurisée et rentable.' },
+                    { title: 'Implémentation', desc: 'Nous construisons et migrons vos systèmes sans interruption.' },
+                    { title: 'Optimisation', desc: 'Nous surveillons et améliorons continuellement votre stack.' }
+                ]
+            },
+            team: {
+                title: 'Notre Direction',
+                members: [
+                    {
+                        name: 'Kmar Turki',
+                        role: 'Co-Fondatrice',
+                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/'
+                    },
+                    {
+                        name: 'Mahdi Ben Slima',
+                        role: 'Co-Fondateur',
+                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/'
+                    }
+                ]
+            }
         },
         cookie: {
             title: 'Nous utilisons des cookies',
