@@ -2,27 +2,14 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useState, useRef, useEffect } from 'react';
+
 
 export default function Hero() {
     const { t } = useLanguage();
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const containerRef = useRef(null);
 
-    const handleMouseMove = (event) => {
-        if (containerRef.current) {
-            const rect = containerRef.current.getBoundingClientRect();
-            setMousePosition({
-                x: event.clientX - rect.left,
-                y: event.clientY - rect.top,
-            });
-        }
-    };
 
     return (
         <section
-            ref={containerRef}
-            onMouseMove={handleMouseMove}
             className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#0a0e17]"
         >
             {/* Grid & Glow Background */}
@@ -37,14 +24,6 @@ export default function Hero() {
                         `,
                         backgroundSize: '40px 40px',
                         maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
-                    }}
-                />
-
-                {/* Mouse Follow Glow */}
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(37, 99, 235, 0.1), transparent 40%)`
                     }}
                 />
             </div>
