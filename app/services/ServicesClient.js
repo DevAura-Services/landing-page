@@ -2,6 +2,15 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import { Rocket, Cloud, Brain, Activity, Shield } from 'lucide-react';
+
+const icons = {
+    devops: Rocket,
+    cloud: Cloud,
+    mlops: Brain,
+    sre: Activity,
+    security: Shield
+};
 
 export default function ServicesClient() {
     const { t } = useLanguage();
@@ -26,6 +35,7 @@ export default function ServicesClient() {
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 gap-12 max-w-6xl mx-auto">
                     {Object.entries(pillars).map(([key, service], idx) => {
+                        const Icon = icons[key] || Rocket;
                         const slugs = {
                             devops: 'devops-transformation',
                             cloud: 'cloud-architecture',
@@ -43,8 +53,8 @@ export default function ServicesClient() {
                                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
                                     {/* Service Info */}
                                     <div className="lg:col-span-1">
-                                        <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center text-3xl mb-6 text-blue-500 group-hover:scale-110 transition-transform">
-                                            {['🚀', '☁️', '🧠', '⚡', '🛡️'][idx]}
+                                        <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
+                                            <Icon size={32} />
                                         </div>
                                         <h2 className="text-3xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                                             {service.title}
