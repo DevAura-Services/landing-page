@@ -20,26 +20,26 @@ const translations = {
             learnBtn: 'Learn More'
         },
         story: {
-            title: 'Your Infrastructure Challenge',
-            subtitle: 'From Complexity to Confidence',
+            title: 'The Complexity Trap',
+            subtitle: 'When Scale Becomes a Struggle',
             stages: {
                 challenge: {
                     number: '01',
                     title: 'Modern Systems are Hard',
-                    description: 'Your infrastructure is complex and critical. Downtime costs money. Security breaches cost trust. Scaling is expensive. Manual deployments are error-prone and slow.',
-                    points: ['Critical dependencies everywhere', 'Scaling becomes exponential in cost', 'Manual processes breed errors', 'Security requires constant vigilance']
+                    description: 'It starts small. But as you scale, your infrastructure morphs into a tangled web of dependencies. Deployments become stressful events. Downtime isn\'t an "if", it\'s a "when". Your team spends more time fighting fires than building features.',
+                    points: ['Fragile Dependencies', 'Deployment Anxiety', 'Hidden Costs', 'Security Blindspots']
                 },
                 guide: {
                     number: '02',
-                    title: 'Expert Guidance Every Step',
-                    description: 'You don\'t have to figure it out alone. Our experts assess your current state, design a transformation roadmap, and guide you through implementation.',
-                    points: ['Expert consultation and assessment', 'Customized transformation roadmap', 'Hands-on implementation support', 'Best practices and methodologies']
+                    title: 'Expert Architectural Guidance',
+                    description: 'We don\'t just patch holes; we re-architect alongside you. Our experts audit your entire stack, identifying bottlenecks and risks. We turn chaos into order using Infrastructure as Code, ensuring every environment is predictable.',
+                    points: ['Deep-Dive Audits', 'Infrastructure as Code', 'Chaos Engineering', 'Zero-Trust Security']
                 },
                 transformation: {
                     number: '03',
-                    title: 'Robust, Automated Systems',
-                    description: 'The result? Automated deployments. Fewer manual tasks. Systems that scale gracefully. Infrastructure that\'s secure by default. Teams that sleep peacefully.',
-                    points: ['Eliminate manual time waste', 'Automated deployments and scaling', 'Security and compliance by design', 'Reliable systems you can trust']
+                    title: 'Operational Excellence',
+                    description: 'Imagine deploying 10 times a day with zero stress. Your systems auto-scale to meet demand and self-heal when components fail. This isn\'t a pipe dream—it\'s the standard we build for every client.',
+                    points: ['99.99% Uptime', 'Automated Scalability', 'Self-Healing Systems', 'Rapid Innovation']
                 }
             }
         },
