@@ -1,10 +1,10 @@
 # Devaura - DevOps Agency Website
 
-![Devaura Logo](public/logo.svg)
+![Devaura Logo](public/logo-with-text.png)
 
 Devaura is a modern, high-performance website for a premier DevOps and MLOps agency. Built with Next.js 14, Tailwind CSS, and Framer Motion, it features a responsive design, smooth animations, and a dark-themed aesthetic tailored for the tech industry.
 
-## � Features
+## Features
 
 -   **Dynamic Landing Page**:
     -   Immersive Hero section with gradient effects.
@@ -34,8 +34,8 @@ Devaura is a modern, high-performance website for a premier DevOps and MLOps age
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/devaura-website.git
-    cd devaura-website
+    git clone https://github.com/DevAura-Services/landing-page.git
+    cd landing-page
     ```
 
 2.  Install dependencies:
