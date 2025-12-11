@@ -49,6 +49,7 @@ const translations = {
         },
         services: {
             title: 'Why Choose Us',
+            carouselTitle: 'Our Services',
             subtitle: 'Comprehensive DevOps & MLOps Solutions',
             description: 'We provide expert DevOps and MLOps solutions to streamline your development lifecycle and accelerate innovation.',
             talent: {

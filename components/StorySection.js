@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import TheProblem from './story/TheProblem';
 import TheSolution from './story/TheSolution';
 import TheOutcome from './story/TheOutcome';
@@ -70,7 +71,7 @@ export default function StorySection() {
                     className="mt-24 text-center"
                 >
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed border-t border-white/5 pt-12">
-                        Ready to write your success story? <span className="text-white font-bold">Devaura</span> is ready to guide you.
+                        Ready to write your success story? <Link href="/contact" className="text-white font-bold hover:text-blue-500 transition-colors">Devaura</Link> is ready to guide you.
                     </p>
                 </motion.div>
             </div>
