@@ -62,6 +62,25 @@ Run the container:
 docker run -p 3000:3000 devaura-website
 ```
 
+
+## 🚀 Deployment
+
+This project is configured to automatically deploy to **GitHub Pages** using GitHub Actions.
+
+### How it works
+1.  **Workflow**: The pipeline is defined in `.github/workflows/deploy.yml`.
+2.  **Trigger**: Pushing to the `main` branch triggers the workflow.
+3.  **Process**:
+    -   Installs dependencies and builds the project.
+    -   Generates a static export (`output: "export"` in `next.config.js`).
+    -   Uploads the build artifact.
+    -   Deploys to the `gh-pages` environment.
+
+### Configuration
+-   **Static Export**: `output: "export"` is enabled in `next.config.js`.
+-   **Base Path**: `basePath` is configured to match the repository name (e.g., `/landing-page`) for correct routing on GitHub Pages.
+-   **Images**: Image optimization is disabled (`unoptimized: true`) as GitHub Pages doesn't support the default Next.js image server.
+
 ## 📁 Project Structure
 
 ```
