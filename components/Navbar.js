@@ -74,19 +74,21 @@ export default function Navbar() {
                         </Link>
 
                         {isServicesOpen && (
-                            <div className="absolute top-full mt-2 left-0 bg-[#1e293b] border border-white/10 rounded-lg shadow-xl overflow-hidden min-w-[280px] z-50">
-                                {serviceLinks.map((service) => (
-                                    <Link
-                                        key={service.href}
-                                        href={service.href}
-                                        className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                                    >
-                                        <span className="text-xl">
-                                            <service.icon size={20} />
-                                        </span>
-                                        <span className="text-sm">{service.name}</span>
-                                    </Link>
-                                ))}
+                            <div className="absolute top-full left-0 pt-2 min-w-[280px] z-50">
+                                <div className="bg-[#1e293b] border border-white/10 rounded-lg shadow-xl overflow-hidden">
+                                    {serviceLinks.map((service) => (
+                                        <Link
+                                            key={service.href}
+                                            href={service.href}
+                                            className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
+                                        >
+                                            <span className="text-xl">
+                                                <service.icon size={20} />
+                                            </span>
+                                            <span className="text-sm">{service.name}</span>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>
