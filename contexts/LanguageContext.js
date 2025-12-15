@@ -216,7 +216,9 @@ const translations = {
             title: 'We use cookies',
             description: 'We use cookies to enhance your browsing experience and analyze our traffic.',
             accept: 'Accept',
-            decline: 'Decline'
+            decline: 'Decline',
+            learnMore: 'Learn More',
+            acceptAll: 'Accept All'
         },
         chatbot: {
             greeting: 'Hi there! 👋 How can I help you with your DevOps needs today?',
@@ -685,7 +687,9 @@ const translations = {
             title: 'Nous utilisons des cookies',
             description: 'Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser notre trafic.',
             accept: 'Accepter',
-            decline: 'Refuser'
+            decline: 'Refuser',
+            learnMore: 'En Savoir Plus',
+            acceptAll: 'Tout Accepter'
         },
         chatbot: {
             greeting: 'Bonjour! 👋 Comment puis-je vous aider avec vos besoins DevOps aujourd\'hui?',
