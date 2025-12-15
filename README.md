@@ -1,27 +1,60 @@
 # Devaura - DevOps Agency Website
 
-![Devaura Logo](public/logo-with-text.png)
+<div align="center">
+  <img src="public/logo-with-text.png" alt="Devaura Logo" width="200"/>
+  <br/>
+  <br/>
+  
+  [![Deploy to GitHub Pages](https://github.com/DevAura-Services/landing-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/DevAura-Services/landing-page/actions/workflows/deploy.yml)
+</div>
 
 Devaura is a modern, high-performance website for a premier DevOps and MLOps agency. Built with Next.js 14, Tailwind CSS, and Framer Motion, it features a responsive design, smooth animations, and a dark-themed aesthetic tailored for the tech industry.
 
-## Features
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](public/screenshots/home.png)
+*The landing page features an immersive hero section, infinite tech marquee, and service highlights.*
+
+### Careers Page
+![Careers Page](public/screenshots/careers.png)
+*A dedicated careers section listing open positions with animated icons and detailed descriptions.*
+
+### Case Studies
+![Case Studies](public/screenshots/case-studies.png)
+*Showcasing success stories with performance metrics and client results.*
+
+### Blog
+![Blog](public/screenshots/blog.png)
+*A hub for industry insights, tutorials, and thought leadership.*
+
+---
+
+## ✨ Features
 
 -   **Dynamic Landing Page**:
     -   Immersive Hero section with gradient effects.
     -   **Tech Marquee**: Infinite scrolling animation displaying core technologies (Docker, K8s, AWS, etc.) in alternating directions.
     -   **Services Hub**: Grid layout highlighting key advantages (Talent, Cost, Location).
+-   **Comprehensive Content**:
+    -   **Careers**: Detailed job listings with dynamic routing.
+    -   **Case Studies**: Real-world success stories with visual metrics.
+    -   **Blog**: Industry articles and insights.
+    -   **Legal**: Terms of Service, Privacy Policy, and Cookie Consent with localStorage persistence.
 -   **Interactive Components**:
     -   Responsive Navbar with mobile drawer.
     -   Contact Form with validation.
-    -   Cookie Consent popup with localStorage persistence.
     -   **Chatbot**: Interactive chatbot for user engagement.
 -   **Tech Stack**:
     -   [Next.js 14](https://nextjs.org/) (App Router)
     -   [Tailwind CSS](https://tailwindcss.com/)
     -   [Lucide React](https://lucide.dev/) (Icons)
+    -   [Framer Motion](https://www.framer.com/motion/) (Animations)
 -   **DevOps Ready**:
     -   Dockerized (`Dockerfile`, `.dockerignore`).
-    -   CI/CD friendly structure.
+    -   CI/CD pipelines for automated deployment.
 
 ## 🛠️ Getting Started
 
@@ -62,7 +95,6 @@ Run the container:
 docker run -p 3000:3000 devaura-website
 ```
 
-
 ## 🚀 Deployment
 
 This project is configured to automatically deploy to **GitHub Pages** using GitHub Actions.
@@ -86,6 +118,10 @@ This project is configured to automatically deploy to **GitHub Pages** using Git
 ```
 devaura-website/
 ├── app/                # Next.js App Router pages and layouts
+│   ├── blog/           # Blog listing page
+│   ├── careers/        # Careers pages (listing & details)
+│   ├── case-studies/   # Case studies listing page
+│   ├── legal/          # Legal pages (Terms, Privacy)
 │   ├── globals.css     # Global styles and Tailwind directives
 │   ├── layout.js       # Root layout (Navbar, Footer)
 │   └── page.js         # Landing page
@@ -94,8 +130,9 @@ devaura-website/
 │   ├── Navbar.js
 │   ├── Footer.js
 │   ├── TechMarquee.js
-│   └── Chatbot.js
-├── public/             # Static assets
+│   ├── Chatbot.js
+│   └── CookieConsent.js
+├── public/             # Static assets (images, screenshots)
 └── ...config files
 ```
 

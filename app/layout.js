@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Chatbot from '@/components/Chatbot'
 import CookieConsent from '@/components/CookieConsent'
+import Analytics from '@/components/Analytics'
 import dynamic from 'next/dynamic';
 
 const MouseGlow = dynamic(() => import('@/components/MouseGlow'), { ssr: false });
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
             <body className={inter.className}>
                 <MouseGlow />
                 <LanguageProvider>
+                    <Analytics />
                     <Navbar />
                     {children}
                     <Footer />

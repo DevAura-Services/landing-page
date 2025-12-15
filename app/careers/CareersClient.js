@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Rocket, GraduationCap, Globe, Scale } from 'lucide-react';
 
 export default function CareersClient() {
     const { t } = useLanguage();
@@ -26,10 +27,21 @@ export default function CareersClient() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {['innovative', 'learning', 'exposure', 'balance'].map((key, idx) => {
-                            const icons = ['🚀', '📚', '🌍', '⚖️'];
+                            const iconMap = {
+                                innovative: Rocket,
+                                learning: GraduationCap,
+                                exposure: Globe,
+                                balance: Scale
+                            };
+                            const Icon = iconMap[key];
                             return (
-                                <div key={idx} className="bg-[#1e293b]/30 border border-white/5 p-8 rounded-2xl hover:bg-[#1e293b]/50 transition-colors">
-                                    <div className="text-4xl mb-4">{icons[idx]}</div>
+                                <div key={idx} className="group bg-[#1e293b]/30 border border-white/5 p-8 rounded-2xl hover:bg-[#1e293b]/50 transition-all hover:-translate-y-1 hover:border-blue-500/30">
+                                    <div className="mb-4 inline-block p-3 rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                                        <Icon
+                                            size={32}
+                                            className="text-blue-400 group-hover:text-blue-300 transition-all duration-300 group-hover:scale-110 filter drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]"
+                                        />
+                                    </div>
                                     <h3 className="text-xl font-bold text-white mb-3">
                                         {t(`careers.benefits.${key}.title`)}
                                     </h3>
