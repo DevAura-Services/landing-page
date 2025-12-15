@@ -21,7 +21,7 @@ export default function Hero() {
                             linear-gradient(to bottom, #3b82f6 1px, transparent 1px)
                         `,
                         backgroundSize: '50px 50px',
-                        maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
+                        maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 70%)'
                     }}
                 />
 
@@ -34,7 +34,7 @@ export default function Hero() {
                             linear-gradient(to bottom, #60a5fa 1px, transparent 1px)
                         `,
                         backgroundSize: '100px 100px',
-                        maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
+                        maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 60%)',
                         animation: 'pulse 10s infinite ease-in-out'
                     }}
                 />
@@ -61,6 +61,9 @@ export default function Hero() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse" />
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 blur-[100px] rounded-full mix-blend-screen" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-600/10 blur-[100px] rounded-full mix-blend-screen" />
+
+                {/* Seamless Bottom Fade */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0e17] via-[#0a0e17]/80 to-transparent z-10" />
             </div>
 
             <div className="container mx-auto px-4 relative z-10 text-center">
