@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Rocket, Zap, Target, DollarSign } from 'lucide-react';
+import { basePath } from '@/lib/basePath';
 
 export default function DevOpsClient() {
     const { t } = useLanguage();
@@ -39,7 +40,7 @@ export default function DevOpsClient() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10">
                             <Image
-                                src="/devops_transformation_1764884707318.png"
+                                src={`${basePath}/devops_transformation_1764884707318.png`}
                                 alt="DevOps Transformation"
                                 fill
                                 className="object-cover"

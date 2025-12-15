@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Cloud, TrendingUp, ShieldCheck, Coins } from 'lucide-react';
+import { basePath } from '@/lib/basePath';
 
 export default function CloudClient() {
     const { t } = useLanguage();
@@ -39,7 +40,7 @@ export default function CloudClient() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10">
                             <Image
-                                src="/cloud_architecture_1764884725710.png"
+                                src={`${basePath}/cloud_architecture_1764884725710.png`}
                                 alt="Cloud Architecture"
                                 fill
                                 className="object-cover"

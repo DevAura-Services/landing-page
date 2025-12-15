@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Shield, Lock, Scale, Zap } from 'lucide-react';
+import { basePath } from '@/lib/basePath';
 
 export default function DevSecOpsClient() {
     const { t } = useLanguage();
@@ -39,7 +40,7 @@ export default function DevSecOpsClient() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10">
                             <Image
-                                src="/devsecops_security_1764884787872.png"
+                                src={`${basePath}/devsecops_security_1764884787872.png`}
                                 alt="DevSecOps Security"
                                 fill
                                 className="object-cover"

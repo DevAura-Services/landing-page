@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Activity, CheckCircle, TrendingUp, Search } from 'lucide-react';
+import { basePath } from '@/lib/basePath';
 
 export default function SREClient() {
     const { t } = useLanguage();
@@ -39,7 +40,7 @@ export default function SREClient() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10">
                             <Image
-                                src="/sre_monitoring_1764884768421.png"
+                                src={`${basePath}/sre_monitoring_1764884768421.png`}
                                 alt="SRE Monitoring"
                                 fill
                                 className="object-cover"

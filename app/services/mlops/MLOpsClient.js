@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Brain, Rocket, BarChart, RefreshCw } from 'lucide-react';
+import { basePath } from '@/lib/basePath';
 
 export default function MLOpsClient() {
     const { t } = useLanguage();
@@ -39,7 +40,7 @@ export default function MLOpsClient() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10">
                             <Image
-                                src="/mlops_pipeline_1764884744914.png"
+                                src={`${basePath}/mlops_pipeline_1764884744914.png`}
                                 alt="MLOps Pipeline"
                                 fill
                                 className="object-cover"
