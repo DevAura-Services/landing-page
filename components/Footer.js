@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-1 md:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-4">
+                        <Link href={basePath || '/'} className="flex items-center gap-2 mb-4">
                             <img src={`${basePath}/logo-with-text.png`} alt="Devaura Logo" className="h-10" />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">

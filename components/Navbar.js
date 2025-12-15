@@ -48,13 +48,13 @@ export default function Navbar() {
             <div className={`px-4 md:px-8 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'h-16' : 'container mx-auto h-20'
                 }`}>
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2">
+                <Link href={basePath || '/'} className="flex items-center gap-2">
                     <img src={`${basePath}/logo-with-text.png`} alt="Devaura Logo" className="h-10" />
                 </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:!flex items-center gap-8">
-                    <Link href="/" className="text-gray-300 hover:text-white transition-colors">{t('nav.home')}</Link>
+                    <Link href={basePath || '/'} className="text-gray-300 hover:text-white transition-colors">{t('nav.home')}</Link>
                     <Link href="/about" className="text-gray-300 hover:text-white transition-colors">{t('nav.about')}</Link>
 
                     {/* Services Dropdown */}
@@ -143,7 +143,7 @@ export default function Navbar() {
             {isMenuOpen && (
                 <div className="md:hidden bg-[#0a0e17] border-b border-white/10">
                     <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-                        <Link href="/" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
+                        <Link href={basePath || '/'} className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</Link>
                         <Link href="/about" className="text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</Link>
 
                         {/* Mobile Services with Submenu */}
