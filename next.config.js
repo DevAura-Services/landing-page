@@ -2,6 +2,7 @@
 const nextConfig = {
     output: "export",
     basePath: "/landing-page",
+    trailingSlash: true,
     env: {
         NEXT_PUBLIC_BASE_PATH: "/landing-page",
     },
