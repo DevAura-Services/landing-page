@@ -26,6 +26,12 @@ export async function generateMetadata({ params }) {
     };
 }
 
+export async function generateStaticParams() {
+    return jobData.map((job) => ({
+        slug: job.slug,
+    }));
+}
+
 export default function JobDetailPage({ params }) {
     return <JobDetailClient slug={params.slug} />;
 }

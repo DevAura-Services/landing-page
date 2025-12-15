@@ -8,7 +8,7 @@ import Link from 'next/link';
 const StatsSection = ({ t }) => {
     const stats = t('about.stats') || [];
     return (
-        <div className="grid grid-cols-3 gap-8 mb-20 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 max-w-5xl mx-auto">
             {stats.map((stat, idx) => (
                 <motion.div
                     key={idx}
