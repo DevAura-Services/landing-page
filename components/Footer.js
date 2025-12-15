@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { basePath } from '@/lib/basePath';
 
 export default function Footer() {
     const { t } = useLanguage();
@@ -12,7 +13,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 mb-4">
-                            <img src="/logo-with-text.png" alt="Devaura Logo" className="h-10" />
+                            <img src={`${basePath}/logo-with-text.png`} alt="Devaura Logo" className="h-10" />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             {t('footer.description')}

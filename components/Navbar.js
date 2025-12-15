@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { basePath } from '@/lib/basePath';
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Rocket, Cloud, Brain, Activity, Shield } from 'lucide-react';
@@ -48,7 +49,7 @@ export default function Navbar() {
                 }`}>
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <img src="/logo-with-text.png" alt="Devaura Logo" className="h-10" />
+                    <img src={`${basePath}/logo-with-text.png`} alt="Devaura Logo" className="h-10" />
                 </Link>
 
                 {/* Desktop Menu */}
