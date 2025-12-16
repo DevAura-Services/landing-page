@@ -15,7 +15,7 @@ const translations = {
         hero: {
             title: 'Future-Proof Your',
             titleHighlight: 'Infrastructure with Devaura',
-            description: 'We provide expert DevOps and MLOps solutions to streamline your development lifecycle and accelerate innovation.',
+            description: 'We provide expert solutions to streamline your development lifecycle and accelerate innovation.',
             scheduleBtn: 'Schedule Consultation',
             learnBtn: 'Learn More'
         },
@@ -509,7 +509,7 @@ const translations = {
         hero: {
             title: 'Sécurisez Votre',
             titleHighlight: 'Infrastructure avec Devaura',
-            description: 'Nous fournissons des solutions expertes DevOps et MLOps pour rationaliser votre cycle de développement et accélérer l\'innovation.',
+            description: 'Nous fournissons des solutions expertes pour rationaliser votre cycle de développement et accélérer l\'innovation.',
             scheduleBtn: 'Planifier une Consultation',
             learnBtn: 'En Savoir Plus'
         },
@@ -975,7 +975,7 @@ const translations = {
         hero: {
             title: 'Asegure Su',
             titleHighlight: 'Infraestructura con Devaura',
-            description: 'Brindamos soluciones expertas de DevOps y MLOps para optimizar su ciclo de desarrollo y acelerar la innovación.',
+            description: 'Brindamos soluciones expertas para optimizar su ciclo de desarrollo y acelerar la innovación.',
             scheduleBtn: 'Programar Consulta',
             learnBtn: 'Saber Más'
         },
@@ -1410,7 +1410,7 @@ const translations = {
         hero: {
             title: 'أمّن',
             titleHighlight: 'بنيتك التحتية مع ديفأورا',
-            description: 'نقدم حلول DevOps و MLOps احترافية لتبسيط دورة التطوير وتسريع الابتكار.',
+            description: 'نقدم حلولاً احترافية لتبسيط دورة التطوير وتسريع الابتكار.',
             scheduleBtn: 'حجز استشارة',
             learnBtn: 'اعرف المزيد'
         },
