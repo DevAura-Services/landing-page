@@ -14,7 +14,7 @@ export default function Hero() {
             <div className="absolute inset-0 pointer-events-none">
                 {/* Prominent Grid Pattern */}
                 <div
-                    className="absolute inset-0 opacity-20"
+                    className="absolute inset-0 opacity-10"
                     style={{
                         backgroundImage: `
                             linear-gradient(to right, #3b82f6 1px, transparent 1px),
@@ -27,7 +27,7 @@ export default function Hero() {
 
                 {/* Moving Grid Overlay for Depth */}
                 <div
-                    className="absolute inset-0 opacity-10"
+                    className="absolute inset-0 opacity-5"
                     style={{
                         backgroundImage: `
                             linear-gradient(to right, #60a5fa 1px, transparent 1px),

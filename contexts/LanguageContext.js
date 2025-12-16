@@ -503,6 +503,7 @@ const translations = {
             about: 'À Propos',
             careers: 'Carrières',
             contact: 'Contact',
+            services: 'Services',
             schedule: 'Planifier une Consultation'
         },
         hero: {
@@ -968,6 +969,7 @@ const translations = {
             about: 'Nosotros',
             careers: 'Carreras',
             contact: 'Contacto',
+            services: 'Servicios',
             schedule: 'Programar Consulta'
         },
         hero: {
@@ -1402,6 +1404,7 @@ const translations = {
             about: 'من نحن',
             careers: 'الوظائف',
             contact: 'اتصل بنا',
+            services: 'الخدمات',
             schedule: 'حجز استشارة'
         },
         hero: {
