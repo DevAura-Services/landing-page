@@ -59,7 +59,7 @@ export default function Hero() {
 
                 {/* Major Glow Effects */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse" />
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 blur-[100px] rounded-full mix-blend-screen" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 blur-[100px] rounded-full mix-blend-screen" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-600/10 blur-[100px] rounded-full mix-blend-screen" />
 
                 {/* Seamless Bottom Fade */}
@@ -89,13 +89,13 @@ export default function Hero() {
                         {t('hero.title')} <br />
                         <span
                             style={{
-                                background: 'linear-gradient(90deg, rgba(139,92,246,0.8) 0%, rgba(139,92,246,0.9) 30%, rgba(168,85,247,1) 50%, rgba(139,92,246,0.9) 70%, rgba(139,92,246,0.8) 100%)',
+                                background: 'linear-gradient(90deg, rgba(56,189,248,0.8) 0%, rgba(56,189,248,0.9) 30%, rgba(14,165,233,1) 50%, rgba(56,189,248,0.9) 70%, rgba(56,189,248,0.8) 100%)',
                                 backgroundSize: '200% auto',
                                 WebkitBackgroundClip: 'text',
                                 backgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 animation: 'textGlow 4s linear infinite',
-                                filter: 'drop-shadow(0 0 20px rgba(168,85,247,0.3))'
+                                filter: 'drop-shadow(0 0 20px rgba(14,165,233,0.3))'
                             }}
                         >
                             {t('hero.titleHighlight')}
