@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect } from 'react';
+import { basePath } from '@/lib/basePath';
 
 const translations = {
     en: {
@@ -202,12 +203,14 @@ const translations = {
                     {
                         name: 'Kmar Turki',
                         role: 'Co-Founder',
-                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/'
+                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/',
+                        image: `${basePath}/team/Kmar.png`
                     },
                     {
                         name: 'Mahdi Ben Slima',
                         role: 'Co-Founder',
-                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/'
+                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/',
+                        image: `${basePath}/team/Mahdi.png`
                     }
                 ]
             }
@@ -674,12 +677,14 @@ const translations = {
                     {
                         name: 'Kmar Turki',
                         role: 'Co-Fondatrice',
-                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/'
+                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/',
+                        image: `${basePath}/team/Kmar.png`
                     },
                     {
                         name: 'Mahdi Ben Slima',
                         role: 'Co-Fondateur',
-                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/'
+                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/',
+                        image: `${basePath}/team/Mahdi.png`
                     }
                 ]
             }
@@ -1119,7 +1124,29 @@ const translations = {
                 'Soluciones MLOps Dedicadas',
                 'Soporte y Monitoreo 24/7',
                 'Estrategias de Escalado Rentables'
-            ]
+            ],
+            stats: [
+                { label: 'Proyectos Entregados', value: '50+' },
+                { label: 'Tiempo de Actividad Garantizado', value: '99.99%' },
+                { label: 'Miembros del Equipo', value: '20+' }
+            ],
+            team: {
+                title: 'Nuestro Liderazgo',
+                members: [
+                    {
+                        name: 'Kmar Turki',
+                        role: 'Co-Fundador',
+                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/',
+                        image: `${basePath}/team/Kmar.png`
+                    },
+                    {
+                        name: 'Mahdi Ben Slima',
+                        role: 'Co-Fundador',
+                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/',
+                        image: `${basePath}/team/Mahdi.png`
+                    }
+                ]
+            }
         },
         cookie: {
             title: 'Usamos cookies',
@@ -1554,7 +1581,29 @@ const translations = {
                 'حلول MLOps مخصصة',
                 'دعم ومراقبة على مدار الساعة',
                 'استراتيجيات توسع فعالة من حيث التكلفة'
-            ]
+            ],
+            stats: [
+                { label: 'مشاريع تم تسليمها', value: '50+' },
+                { label: 'ضمان وقت التشغيل', value: '99.99%' },
+                { label: 'أعضاء الفريق', value: '20+' }
+            ],
+            team: {
+                title: 'قيادتنا',
+                members: [
+                    {
+                        name: 'Kmar Turki',
+                        role: 'شريك مؤسس',
+                        linkedin: 'https://www.linkedin.com/in/kmar-turki-59b687305/',
+                        image: `${basePath}/team/Kmar.png`
+                    },
+                    {
+                        name: 'Mahdi Ben Slima',
+                        role: 'شريك مؤسس',
+                        linkedin: 'https://www.linkedin.com/in/benslimamahdi/',
+                        image: `${basePath}/team/Mahdi.png`
+                    }
+                ]
+            }
         },
         cookie: {
             title: 'نحن نستخدم ملفات تعريف الارتباط',

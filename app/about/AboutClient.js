@@ -67,8 +67,16 @@ const TeamSection = ({ t }) => {
                         whileHover={{ y: -5 }}
                         className="bg-[#1e293b]/30 border border-white/5 rounded-2xl overflow-hidden group relative"
                     >
-                        <div className="h-64 bg-gradient-to-br from-blue-900/20 to-purple-900/20 flex items-center justify-center">
-                            <Users size={64} className="text-blue-500/50 group-hover:text-blue-400 transition-colors" />
+                        <div className="h-64 bg-gradient-to-br from-blue-900/20 to-purple-900/20 flex items-center justify-center overflow-hidden">
+                            {member.image ? (
+                                <img
+                                    src={member.image}
+                                    alt={member.name}
+                                    className="w-full h-full object-cover"
+                                />
+                            ) : (
+                                <Users size={64} className="text-blue-500/50 group-hover:text-blue-400 transition-colors" />
+                            )}
                         </div>
                         <div className="p-6 text-center">
                             <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
