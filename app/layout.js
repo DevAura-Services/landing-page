@@ -3,7 +3,6 @@ import { basePath } from '@/lib/basePath';
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Chatbot from '@/components/Chatbot'
 import CookieConsent from '@/components/CookieConsent'
 import Analytics from '@/components/Analytics'
 import dynamic from 'next/dynamic';
@@ -77,7 +76,6 @@ export default function RootLayout({ children }) {
                     <Navbar />
                     {children}
                     <Footer />
-                    <Chatbot />
                     <CookieConsent />
                 </LanguageProvider>
             </body>

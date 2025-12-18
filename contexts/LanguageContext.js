@@ -226,13 +226,7 @@ const translations = {
             learnMore: 'Learn More',
             acceptAll: 'Accept All'
         },
-        chatbot: {
-            greeting: 'Hi there! 👋 How can I help you with your DevOps needs today?',
-            response: 'Thanks for reaching out! Our team will get back to you shortly. In the meantime, feel free to check out our services page.',
-            placeholder: 'Type a message...',
-            assistant: 'Devaura Assistant',
-            online: 'Online'
-        },
+
         careers: {
             title: 'Join Our Team',
             subtitle: 'Build your career with Devaura and shape the future of DevOps and MLOps',
@@ -703,13 +697,7 @@ const translations = {
             learnMore: 'En Savoir Plus',
             acceptAll: 'Tout Accepter'
         },
-        chatbot: {
-            greeting: 'Bonjour! 👋 Comment puis-je vous aider avec vos besoins DevOps aujourd\'hui?',
-            response: 'Merci de nous avoir contactés! Notre équipe vous répondra sous peu. En attendant, n\'hésitez pas à consulter notre page de services.',
-            placeholder: 'Tapez un message...',
-            assistant: 'Assistant Devaura',
-            online: 'En ligne'
-        },
+
         careers: {
             title: 'Rejoignez Notre Équipe',
             subtitle: 'Construisez votre carrière avec Devaura et façonnez l\'avenir du DevOps et MLOps',
@@ -1163,13 +1151,7 @@ const translations = {
             accept: 'Aceptar',
             decline: 'Rechazar'
         },
-        chatbot: {
-            greeting: '¡Hola! 👋 ¿Cómo puedo ayudarte con tus necesidades de DevOps hoy?',
-            response: '¡Gracias por contactarnos! Nuestro equipo se pondrá en contacto contigo pronto. Mientras tanto, no dudes en consultar nuestra página de servicios.',
-            placeholder: 'Escribe un mensaje...',
-            assistant: 'Asistente Devaura',
-            online: 'En línea'
-        },
+
         careers: {
             title: 'Únete a Nuestro Equipo',
             subtitle: 'Construye tu carrera con Devaura y da forma al futuro de DevOps y MLOps',
@@ -1623,13 +1605,7 @@ const translations = {
             accept: 'قبول',
             decline: 'رفض'
         },
-        chatbot: {
-            greeting: 'مرحبًا! 👋 كيف يمكنني مساعدتك في احتياجات DevOps اليوم؟',
-            response: 'شكرًا لتواصلك معنا! سيتواصل فريقنا معك قريبًا. في هذه الأثناء، لا تتردد في الاطلاع على صفحة خدماتنا.',
-            placeholder: 'اكتب رسالة...',
-            assistant: 'مساعد ديفأورا',
-            online: 'متصل'
-        },
+
         careers: {
             title: 'انضم إلى فريقنا',
             subtitle: 'ابنِ مسيرتك المهنية مع ديفأورا وشكّل مستقبل DevOps و MLOps',
