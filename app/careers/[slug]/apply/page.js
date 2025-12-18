@@ -1,6 +1,7 @@
 import ApplyClient from './ApplyClient';
 import { jobData } from '@/lib/jobData';
 
+/*
 export async function generateMetadata({ params }) {
     const job = jobData.find(j => j.slug === params.slug);
 
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }) {
         description: `Submit your application for the ${job.title} position at Devaura.`,
     };
 }
+*/
 
 export async function generateStaticParams() {
     return jobData.map((job) => ({

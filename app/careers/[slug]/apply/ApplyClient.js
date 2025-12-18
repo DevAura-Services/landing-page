@@ -1,20 +1,54 @@
 'use client';
 
 import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+// import { useLanguage } from '@/contexts/LanguageContext';
+import { jobData } from '@/lib/jobData'; // Import static data
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation';
 
 export default function ApplyClient({ slug }) {
-    const { t } = useLanguage();
+    // const { t } = useLanguage();
+    // Mock t function for build stability
+    const t = (key) => {
+        const defaults = {
+            'application.title': 'Apply for',
+            'careers.location': 'Location',
+            'careers.remote': 'Remote',
+            'application.personalInfo': 'Personal Information',
+            'application.fullName': 'Full Name',
+            'application.email': 'Email Address',
+            'application.phone': 'Phone Number',
+            'application.linkedin': 'LinkedIn Profile URL',
+            'application.portfolio': 'Portfolio / GitHub URL',
+            'application.experience': 'Experience',
+            'application.yearsExp': 'Years of Experience',
+            'application.currentCompany': 'Current Company (Optional)',
+            'application.noticePeriod': 'Notice Period',
+            'application.resume': 'Resume / CV',
+            'application.coverLetter': 'Cover Letter (Optional)',
+            'application.whyFit': 'Why are you a good fit for this role?',
+            'application.submit': 'Submit Application',
+            'application.backToJobs': 'Back to Jobs',
+            'application.successTitle': 'Application Submitted!',
+            'application.successMsg': 'Thank you for applying. We will review your application and get back to you soon.'
+        };
+        return defaults[key] || key;
+    };
 
-    // Find job details
-    const jobs = t('careers.jobs');
-    const job = jobs.find(j => j.slug === slug);
+    // 1. Validate job existence using static data (Build safe)
+    const staticJob = jobData.find(j => j.slug === slug);
 
-    if (!job) {
-        notFound();
+    if (!staticJob) {
+        // Fallback UI instead of notFound() to prevent build crash
+        return (
+            <main className="min-h-screen bg-[#0a0e17] pt-32 pb-20 flex items-center justify-center">
+                <div className="text-white text-xl">Job Not Found</div>
+            </main>
+        );
     }
+
+    // Use static job data directly
+    const job = staticJob;
 
     const [formData, setFormData] = useState({
         fullName: '',
@@ -30,14 +64,48 @@ export default function ApplyClient({ slug }) {
         coverLetter: null
     });
 
+    const [status, setStatus] = useState({ loading: false, error: null, success: false });
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Mock submission - in real app, send to API/S3
-        console.log('Application Submitted:', { job: job.title, ...formData });
-        setIsSubmitted(true);
-        window.scrollTo(0, 0);
+        setStatus({ loading: true, error: null, success: false });
+
+        try {
+            const formDataToSend = new FormData();
+
+            // Add Job Title
+            formDataToSend.append('jobTitle', job.title);
+
+            // Add Text Fields
+            Object.keys(formData).forEach(key => {
+                if (key !== 'resume' && key !== 'coverLetter') {
+                    formDataToSend.append(key, formData[key]);
+                }
+            });
+
+            // Add Files
+            if (formData.resume) formDataToSend.append('resume', formData.resume);
+            if (formData.coverLetter) formDataToSend.append('coverLetter', formData.coverLetter);
+
+            const response = await fetch('/careers.php', {
+                method: 'POST',
+                body: formDataToSend,
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || 'Something went wrong');
+            }
+
+            setStatus({ loading: false, error: null, success: true });
+            setIsSubmitted(true);
+            window.scrollTo(0, 0);
+        } catch (error) {
+            setStatus({ loading: false, error: error.message, success: false });
+            alert('Error: ' + error.message);
+        }
     };
 
     const handleFileChange = (e, field) => {
@@ -234,9 +302,13 @@ export default function ApplyClient({ slug }) {
 
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition-colors shadow-lg shadow-blue-600/20 text-lg"
+                            disabled={status.loading}
+                            className={`w-full font-bold py-4 rounded-lg transition-colors shadow-lg text-lg ${status.loading
+                                ? 'bg-gray-600 cursor-not-allowed'
+                                : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/20'
+                                } text-white`}
                         >
-                            {t('application.submit')}
+                            {status.loading ? 'Submitting Application...' : t('application.submit')}
                         </button>
                     </form>
                 </div>

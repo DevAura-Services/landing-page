@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    basePath: "/landing-page",
     trailingSlash: true,
     env: {
-        NEXT_PUBLIC_BASE_PATH: "/landing-page",
+        NEXT_PUBLIC_BASE_PATH: "",
     },
     images: {
         unoptimized: true,

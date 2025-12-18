@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Link from 'next/link';
 
 
 
@@ -15,10 +16,80 @@ export default function Contact() {
         message: ''
     });
 
-    const handleSubmit = (e) => {
+    const [status, setStatus] = useState({ loading: false, error: null, success: false });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
+        setStatus({ loading: true, error: null, success: false });
+
+        try {
+            const formDataToSend = new FormData();
+            for (const key in formData) {
+                formDataToSend.append(key, formData[key]);
+            }
+
+            const response = await fetch('/contact.php', {
+                method: 'POST',
+                body: formDataToSend,
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || 'Something went wrong');
+            }
+
+            setStatus({ loading: false, error: null, success: true });
+            setFormData({
+                name: '',
+                company: '',
+                email: '',
+                inquiryType: t('contact.inquiryTypes.general'),
+                message: ''
+            });
+            setStatus({ loading: false, error: null, success: true });
+            setIsSubmitted(true);
+            window.scrollTo(0, 0);
+            setFormData({
+                name: '',
+                company: '',
+                email: '',
+                inquiryType: t('contact.inquiryTypes.general'),
+                message: ''
+            });
+            // alert(result.message || 'Message sent successfully!');
+        } catch (error) {
+            setStatus({ loading: false, error: error.message, success: false });
+            alert('Error: ' + error.message);
+        }
     };
+
+    if (isSubmitted) {
+        return (
+            <div className="min-h-[60vh] flex items-center justify-center py-20">
+                <div className="container mx-auto px-4 text-center">
+                    <div className="bg-[#1e293b]/30 border border-white/5 p-12 rounded-3xl max-w-2xl mx-auto">
+                        <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 text-green-500">
+                            ✓
+                        </div>
+                        <h1 className="text-3xl font-bold text-white mb-4">
+                            {t('contact.successTitle')}
+                        </h1>
+                        <p className="text-gray-400 mb-8 text-lg">
+                            {t('contact.successMsg')}
+                        </p>
+                        <Link
+                            href="/"
+                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                        >
+                            {t('contact.backToHome')}
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <main className="min-h-screen bg-[#0a0e17] pt-32 pb-20">
@@ -142,9 +213,13 @@ export default function Contact() {
 
                             <button
                                 type="submit"
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition-colors shadow-lg shadow-blue-600/20"
+                                disabled={status.loading}
+                                className={`w-full font-bold py-4 rounded-lg transition-colors shadow-lg ${status.loading
+                                    ? 'bg-gray-600 cursor-not-allowed'
+                                    : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/20'
+                                    } text-white`}
                             >
-                                {t('contact.sendBtn')}
+                                {status.loading ? 'Sending...' : t('contact.sendBtn')}
                             </button>
                         </form>
                     </div>

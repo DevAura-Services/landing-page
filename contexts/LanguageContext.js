@@ -166,7 +166,10 @@ const translations = {
                 project: 'Project Proposal',
                 partnership: 'Partnership',
                 careers: 'Careers'
-            }
+            },
+            successTitle: 'Message Sent!',
+            successMsg: 'Thank you for contacting us. We will get back to you shortly.',
+            backToHome: 'Back to Home'
         },
         about: {
             title: 'About Devaura',
@@ -640,7 +643,10 @@ const translations = {
                 project: 'Proposition de Projet',
                 partnership: 'Partenariat',
                 careers: 'Carrières'
-            }
+            },
+            successTitle: 'Message Envoyé !',
+            successMsg: 'Merci de nous avoir contactés. Nous vous répondrons sous peu.',
+            backToHome: 'Retour à l\'Accueil'
         },
         about: {
             title: 'À Propos de Devaura',
@@ -1108,7 +1114,10 @@ const translations = {
                 project: 'Propuesta de Proyecto',
                 partnership: 'Asociación',
                 careers: 'Carreras'
-            }
+            },
+            successTitle: '¡Mensaje Enviado!',
+            successMsg: 'Gracias por contactarnos. Nos pondremos en contacto con usted en breve.',
+            backToHome: 'Volver al Inicio'
         },
         about: {
             title: 'Acerca de Devaura',
@@ -1565,7 +1574,10 @@ const translations = {
                 project: 'عرض مشروع',
                 partnership: 'شراكة',
                 careers: 'وظائف'
-            }
+            },
+            successTitle: 'تم إرسال الرسالة!',
+            successMsg: 'شكراً لتواصلكم معنا. سنرد عليكم قريباً.',
+            backToHome: 'العودة للرئيسية'
         },
         about: {
             title: 'عن ديفأورا',
