@@ -42,8 +42,7 @@ export default function Footer() {
                         <h3 className="text-white font-bold mb-4">{t('footer.connect')}</h3>
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li><a href="https://www.linkedin.com/company/devaurapro/about/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">LinkedIn</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Twitter</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">GitHub</a></li>
+                            <li><a href="https://www.instagram.com/devaura.pro/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Instagram</a></li>
                         </ul>
                     </div>
                 </div>
